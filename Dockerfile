@@ -1,20 +1,22 @@
 # syntax=docker/dockerfile:1.4
 
-# 1. For build React app
-FROM node:18-alpine
+# -------- Stage 1: Build the React app --------
+FROM node:18-alpine AS build
 
-# Set working directory
 WORKDIR /app
 
-# 
-COPY public/ /app/public
-COPY src/ /app/src
-
-COPY package.json /app/package.json
-COPY package-lock.json /app/package-lock.json
-
-
-# Same as npm install
+COPY package*.json ./
 RUN npm install
 
-CMD [ "npm", "start" ]
+COPY . .
+RUN npm run build
+
+# -------- Stage 2: Serve with Nginx --------
+FROM nginx:alpine
+
+# Copy the built files from previous stage
+COPY --from=build /app/dist /usr/share/nginx/html
+
+EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]
