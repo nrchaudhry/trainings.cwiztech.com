@@ -38,16 +38,16 @@ export const CoursesOne = () => {
             data-wow-delay="0.2s"
           >
             <li className="active">
-              <a href="#tab_1">Undergraduate</a>
+              <a href="#tab_1">Intermediate / A Levels</a>
             </li>
             <li>
-              <a href="#tab_2">Graduate</a>
+              <a href="#tab_2">Undergraduate</a>
             </li>
             <li>
-              <a href="#tab_3">Online</a>
+              <a href="#tab_3">HND Level 5 courses</a>
             </li>
             <li>
-              <a href="#tab_4">Short Course</a>
+              <a href="#tab_4">IELTS / PTE / German / Spanish </a>
             </li>
           </ul>
           <div className="td_height_50 td_height_lg_50" />

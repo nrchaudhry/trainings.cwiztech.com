@@ -102,7 +102,7 @@
   --white-color: #fff;
   --heading-color: #00001b;
   --body-color: #555;
-  --accent-color: #890c25;
+  --accent-color: #05a54d;
   --gray-color: #f4f3ef;
   --border-color: #d9d9d9;
   --heading-font: "Euclid Circular A", sans-serif;
@@ -8530,7 +8530,9 @@ html .ui-button.ui-state-disabled:active {
   .td_site_branding {
     position: relative;
     z-index: 101;
+  
   }
+  
   .td_nav_list_wrap {
     position: fixed;
     width: 100vw;
@@ -8669,6 +8671,7 @@ html .ui-button.ui-state-disabled:active {
     top: 50%;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
+    
   }
   .td_site_header.td_style_1 {
     top: 0;

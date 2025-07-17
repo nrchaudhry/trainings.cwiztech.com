@@ -61,7 +61,7 @@ export const DepartmentOne = () => {
               </svg>
             </div>
             <h3 className="td_iconbox_title mb-0 td_medium td_fs_36">
-              Economics
+              Computer Sciences
             </h3>
           </div>
           <div
@@ -133,7 +133,7 @@ export const DepartmentOne = () => {
               </svg>
             </div>
             <h3 className="td_iconbox_title mb-0 td_medium td_fs_36">
-              Economics
+              Business Studies
             </h3>
           </div>
           <div
@@ -173,7 +173,7 @@ export const DepartmentOne = () => {
               </svg>
             </div>
             <h3 className="td_iconbox_title mb-0 td_medium td_fs_36">
-              Economics
+              Language courses
             </h3>
           </div>
           <div
@@ -206,7 +206,7 @@ export const DepartmentOne = () => {
               </svg>
             </div>
             <h3 className="td_iconbox_title mb-0 td_medium td_fs_36">
-              Economics
+              Intermediate / A Levels
             </h3>
           </div>
         </div>

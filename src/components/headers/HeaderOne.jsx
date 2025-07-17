@@ -23,7 +23,7 @@ export const HeaderOne = () => {
             <div className="td_main_header_in">
               {/* left */}
               <div className="td_main_header_left">
-                <Link className="td_site_branding" to="/">
+                <Link className="td_site_branding"  to="/">
                   <img src={Logo} alt="Logo" />
                 </Link>
                 <div className="td_header_social_btns">
@@ -54,7 +54,7 @@ export const HeaderOne = () => {
                             <li>
                               <Link to="/">University</Link>
                             </li>
-                            <li>
+                            {/* <li>
                               <Link to="/home-v2">Online Educations</Link>
                             </li>
                             <li>
@@ -74,7 +74,7 @@ export const HeaderOne = () => {
                             </li>
                             <li>
                               <Link to="/home-v8">Kitchen Coach</Link>
-                            </li>
+                            </li> */}
                           </ul>
                         </li>
                         <li className="menu-item-has-children">
@@ -82,21 +82,22 @@ export const HeaderOne = () => {
                           <ul>
                             <li>
                               <Link to="/courses-grid-view">
-                                Courses Grid View
+                                English Langauge <br />
+                                (IELTS / PTE / HND Level 5)
                               </Link>
                             </li>
                             <li>
                               <Link to="/courses-list-view">
-                                Courses List View
+                                Business Studies
                               </Link>
                             </li>
                             <li>
                               <Link to="/courses-grid-with-sidebar">
-                                Courses Grid With Sidebar
+                                Computer Sciences 
                               </Link>
                             </li>
                             <li>
-                              <Link to="/course-details">Course Details</Link>
+                              <Link to="/course-details">More</Link>
                             </li>
                           </ul>
                         </li>
@@ -105,8 +106,8 @@ export const HeaderOne = () => {
                         </li>
                       </ul>
 
-                      <Link className="td_site_branding" to="/">
-                        <img src={Logo} alt="Logo" />
+                      <Link className="td_site_branding"  to="/">
+                        <img src={Logo} alt="Logo" style={{borderRadius:'6px',}}/>
                       </Link>
 
                       {/* last three */}

@@ -76,9 +76,9 @@ export const AboutOne = () => {
               <div className="td_mb_40">
                 <ul className="td_list td_style_5 td_mp_0">
                   <li>
-                    <h3 className="td_fs_24 td_mb_8">Graduate Program</h3>
+                    <h3 className="td_fs_24 td_mb_8">Intermediate / A Levels Programs</h3>
                     <p className="td_fs_18 mb-0">
-                      Browse the Undergraduate Degrees
+                      Browse the Intermediate / A Levels Programs
                     </p>
                   </li>
                   <li>
@@ -94,7 +94,7 @@ export const AboutOne = () => {
                 className="td_btn td_style_1 td_radius_10 td_medium"
               >
                 <span className="td_btn_in td_white_color td_accent_bg">
-                  <span>More About</span>
+                  <span>More Info</span>
                   <svg
                     width="19"
                     height="20"
