@@ -6,7 +6,7 @@ import { HeaderSidebar } from "./HeaderSidebar";
 import { useMobilemenu } from "../../lib/hooks/useMobilemenu";
 import { useStickyHeader } from "../../lib/hooks/useStickyHeader";
 
-import Logo from "../../assets/img/logo.svg";
+import Logo from "../../assets/img/logo.svg"; // Adjust the path as necessary
 
 export const HeaderOne = () => {
   useMobilemenu();

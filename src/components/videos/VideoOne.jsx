@@ -28,12 +28,13 @@ export const VideoOne = () => {
 
           <div className="td_height_70 td_height_lg_50" />
           <h2
-            className="td_fs_48 td_white_color mb-0 wow fadeInUp"
-            data-wow-duration="1s"
-            data-wow-delay="0.2s"
+          className="td_fs_48 td_white_color mb-0 wow fadeInUp"
+          data-wow-duration="1s"
+          data-wow-delay="0.2s"
+          style={{ backgroundColor: '#555', padding: '30px', borderRadius: '50px', width: '300px', border: '4px solid #fff' }} // Dark background with padding for visibility
           >
-            Take a Video Tour to Learn <br />
-            Intro of Campus
+          Explore <span style={{ color: "#28A745" }}>BETS</span> Campuses <br />
+          Through a <span style={{ color: "#28A745" }}>Video</span> Tour
           </h2>
         </div>
       </div>
@@ -48,7 +49,7 @@ export const VideoOne = () => {
               Get In Touch:
             </p>
             <h3 className="td_fs_36 mb-0 td_white_color">
-              <a href="mailto:info@eduon.com">info@eduon.com</a>
+              <a href="mailto:info@bets.edu.uk">info@bets.edu.uk</a>
             </h3>
           </div>
           <div className="td_contact_box_or td_fs_24 td_medium td_white_bg td_white_bg td_center rounded-circle td_accent_color">
@@ -59,7 +60,7 @@ export const VideoOne = () => {
               Get In Touch:
             </p>
             <h3 className="td_fs_36 mb-0 td_white_color">
-              <a href="tel:+019987698870">+01 998 7698 870</a>
+              <a href="tel:+924235883281">+92 42 3588 3281</a>
             </h3>
           </div>
         </div>

@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useHobble } from "../../lib/hooks/useHobble";
 
-import pageHeadingBg from "../../assets/img/others/page_heading_bg.jpg";
+import pageHeadingBg from "../../assets/img/others/page_heading_bg3.jpg";
 import shape3 from "../../assets/img/others/page_heading_shape_3.svg";
 import shape4 from "../../assets/img/others/page_heading_shape_4.svg";
 import shape5 from "../../assets/img/others/page_heading_shape_5.svg";

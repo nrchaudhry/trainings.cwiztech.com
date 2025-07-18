@@ -8,8 +8,8 @@ import campusLife4 from "../../assets/img/home_1/campur_life_4.jpg";
 
 export const CampusOne = () => {
   return (
-    <section className="td_accent_bg td_shape_section_1">
-      <div className="td_shape_position_4 td_accent_color position-absolute">
+    <section className="td_accent_bg td_shape_section_1 bg-green-700">
+      <div className="td_shape_position_4 td_accent_color text-green-700 position-absolute">
         <svg
           width="37"
           height="40"
@@ -57,13 +57,11 @@ export const CampusOne = () => {
           >
             <div className="td_height_57 td_height_lg_0" />
             <div className="td_section_heading td_style_1">
-              <h2 className="td_section_title td_fs_48 mb-0 td_white_color">
-                Navigate
+              <h2 className="td_section_title td_fs_48 mb-0 text-white">
+                Our Specialties
               </h2>
-              <p className="td_section_subtitle td_fs_18 mb-0 td_white_color td_opacity_7">
-                Far far away, behind the word mountains, far from the
-                Consonantia, there live the blind texts. Separated they marks
-                grove right at the coast of the Semantics
+              <p className="td_section_subtitle td_fs_18 mb-0 text-white">
+                At British Education & Training Systems (BETS), we pride ourselves on delivering exceptional education tailored to diverse needs.
               </p>
             </div>
             <div className="td_btn_box">
@@ -98,10 +96,10 @@ export const CampusOne = () => {
               <div className="td_btn_box_in">
                 <Link
                   to="/courses-grid-view"
-                  className="td_btn td_style_1 td_radius_10 td_medium td_fs_18"
+                  className="td_btn td_style_1 td_radius_10 td_medium td_fs_18 bg-red-600 text-white hover:bg-red-700"
                 >
-                  <span className="td_btn_in td_heading_color td_white_bg">
-                    <span>View All Program</span>
+                  <span className="td_btn_in border border-white p-">
+                    <span>Explore Courses</span>
                   </span>
                 </Link>
               </div>
@@ -118,13 +116,13 @@ export const CampusOne = () => {
                   <Link to="/course-details" className="td_card_thumb d-block">
                     <img
                       src={campusLife1}
-                      alt="Campus Life"
+                      alt="Diverse Course Offerings"
                       className="w-100"
                     />
                   </Link>
                   <div className="td_card_info">
-                    <h2 className="td_card_title mb-0 td_fs_18 td_semibold td_white_color">
-                      <Link to="/course-details">Campus Student Life</Link>
+                    <h2 className="td_card_title mb-0 td_fs_18 td_semibold text-white">
+                      <Link to="/course-details">Diverse Course Offerings</Link>
                     </h2>
                     <Link to="/course-details" className="td_card_btn">
                       <svg
@@ -183,13 +181,13 @@ export const CampusOne = () => {
                   <Link to="/course-details" className="td_card_thumb d-block">
                     <img
                       src={campusLife3}
-                      alt="Recreations & Wellness"
+                      alt="Industry-Relevant Training"
                       className="w-100"
                     />
                   </Link>
                   <div className="td_card_info">
-                    <h2 className="td_card_title mb-0 td_fs_18 td_semibold td_white_color">
-                      <Link to="/course-details">Recreations & Wellness</Link>
+                    <h2 className="td_card_title mb-0 td_fs_18 td_semibold text-white">
+                      <Link to="/course-details">Industry-Relevant Training</Link>
                     </h2>
                     <Link to="/course-details" className="td_card_btn">
                       <svg
@@ -250,13 +248,13 @@ export const CampusOne = () => {
                   <Link to="/course-details" className="td_card_thumb d-block">
                     <img
                       src={campusLife2}
-                      alt="Arts & Cultural Program"
+                      alt="Flexible Learning Options"
                       className="w-100"
                     />
                   </Link>
                   <div className="td_card_info">
-                    <h2 className="td_card_title mb-0 td_fs_18 td_semibold td_white_color">
-                      <Link to="/course-details">Arts & Cultural Program</Link>
+                    <h2 className="td_card_title mb-0 td_fs_18 td_semibold text-white">
+                      <Link to="/course-details">Flexible Learning Options</Link>
                     </h2>
                     <Link to="/course-details" className="td_card_btn">
                       <svg
@@ -315,13 +313,13 @@ export const CampusOne = () => {
                   <Link to="/course-details" className="td_card_thumb d-block">
                     <img
                       src={campusLife4}
-                      alt="Sports & Fitness"
+                      alt="Personalized Support"
                       className="w-100"
                     />
                   </Link>
                   <div className="td_card_info">
-                    <h2 className="td_card_title mb-0 td_fs_18 td_semibold td_white_color">
-                      <Link to="/course-details">Sports & Fitness</Link>
+                    <h2 className="td_card_title mb-0 td_fs_18 td_semibold text-white">
+                      <Link to="/course-details">Personalized Support</Link>
                     </h2>
                     <Link to="/course-details" className="td_card_btn">
                       <svg

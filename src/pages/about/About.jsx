@@ -5,10 +5,10 @@ import { CampusOne } from "../../components/campus/CampusOne";
 import { DepartmentOne } from "../../components/departments/DepartmentOne";
 import { VideoOne } from "../../components/videos/VideoOne";
 import { BlogOne } from "../../components/blogs/BlogOne";
-
 export const About = () => {
   return (
     <Layout breadcrumbTitle={"About Us"} breadcrumbSubtitle={"About Us"}>
+       
       {/* about */}
       <AboutOne />
 
