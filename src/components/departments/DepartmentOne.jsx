@@ -69,6 +69,7 @@ export const DepartmentOne = () => {
             </div>
             <h3 className="td_iconbox_title mb-0 td_medium td_fs_36">
               Business Studies
+              Business Studies
             </h3>
           </div>
 
