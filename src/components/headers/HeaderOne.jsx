@@ -48,13 +48,13 @@ export const HeaderOne = () => {
                     <div className="td_nav_list_wrap_in">
                       {/* first three */}
                       <ul className="td_nav_list">
-                        <li className="menu-item-has-children">
+                        <li>
                           <Link to="/">Home</Link>
-                          <ul>
+                          {/*<ul>
                             <li>
                               <Link to="/">University</Link>
                             </li>
-                            {/* <li>
+                             <li>
                               <Link to="/home-v2">Online Educations</Link>
                             </li>
                             <li>
@@ -74,8 +74,8 @@ export const HeaderOne = () => {
                             </li>
                             <li>
                               <Link to="/home-v8">Kitchen Coach</Link>
-                            </li> */}
-                          </ul>
+                            </li> 
+                          </ul>*/}
                         </li>
                         <li className="menu-item-has-children">
                           <Link to="/products">Courses</Link>
