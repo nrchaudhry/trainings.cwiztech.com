@@ -23,20 +23,20 @@ export const Contact = () => {
                       </h2>
                     </div>
                     <div className="td_mb_40">
-                      <h2 className="td_fs_24 td_semibold td_mb_20">
+                      {/* <h2 className="td_fs_24 td_semibold td_mb_20">
                         USA Campus
-                      </h2>
+                      </h2> */}
                       <p className="td_fs_18 td_heading_color td_medium td_mb_10">
-                        100 Wilshire Blvd, Suite 700 Santa Monica, CA 90401, USA
+                        6A New Muslim Town (Facing Canal), Lahore, Pakistan
                       </p>
                       <p className="td_fs_18 td_heading_color td_medium td_mb_10 td_opacity_7">
-                        <a href="tel:+1(310)620-8565">+1 (310) 620-8565</a>
+                        <a href="tel:+1(310)620-8565">+92 (042) 35883281-2</a>
                       </p>
                       <p className="td_fs_18 td_heading_color td_medium mb-0 td_opacity_7">
-                        <a href="mailto:info@gmail.com">info@gmail.com</a>
+                        <a href="mailto:info@gmail.com">info@bets.edu.pk</a>
                       </p>
                     </div>
-                    <div>
+                    {/* <div>
                       <h2 className="td_fs_24 td_semibold td_mb_20">
                         Monica Campus
                       </h2>
@@ -49,7 +49,7 @@ export const Contact = () => {
                       <p className="td_fs_18 td_heading_color td_medium mb-0 td_opacity_7">
                         <a href="mailto:info@gmail.com">info@gmail.com</a>
                       </p>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>
@@ -58,12 +58,11 @@ export const Contact = () => {
         </div>
 
         <div className="td_height_120 td_height_lg_80" />
-
         <div className="td_map">
           <iframe
             id="map"
             title="Location Map"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96652.27317354927!2d-74.33557928194516!3d40.79756494697628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3a82f1352d0dd%3A0x81d4f72c4435aab5!2sTroy+Meadows+Wetlands!5e0!3m2!1sen!2sbd!4v1563075599994!5m2!1sen!2sbd"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3401.586705918893!2d74.31212917389921!3d31.508042147754015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391904792f97c59d%3A0xfaaa771830fc154a!2sBritish%20Education%20%26%20Training%20Systems%20(BETS)!5e0!3m2!1sen!2suk!4v1753107895773!5m2!1sen!2suk"
             allowFullScreen
           />
         </div>

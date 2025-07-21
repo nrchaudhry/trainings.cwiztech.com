@@ -16,7 +16,7 @@ export const HeaderLanguage = () => {
         <span>English</span>
         <img src={WorldIcon} alt="" className="td_header_dropdown_btn_icon" />
       </button>
-      <ul className="td_header_dropdown_list td_mp_0">
+      {/* <ul className="td_header_dropdown_list td_mp_0">
         <li>
           <a href="#">English</a>
         </li>
@@ -26,7 +26,7 @@ export const HeaderLanguage = () => {
         <li>
           <a href="#">Russian</a>
         </li>
-      </ul>
+      </ul> */}
     </>
   );
 };
