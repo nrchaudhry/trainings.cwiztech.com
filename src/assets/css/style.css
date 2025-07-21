@@ -2682,6 +2682,24 @@ label {
   position: relative;
   z-index: 1;
 }
+.td_btn.td_style_1 .td_btn_in_subscribe {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  padding: 13px 25px;
+  gap: 10px;
+  background-color: #fbcc06;
+  border-radius: inherit;
+  position: relative;
+  z-index: 1;
+}
 .td_btn.td_style_1 .td_btn_in::before {
   content: "";
   position: absolute;
