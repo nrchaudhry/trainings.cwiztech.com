@@ -45,6 +45,21 @@ export const CoursesOne = () => {
 
   return (
     <section className="td_gray_bg_3">
+    <div>
+      {Object.entries(courses).map(([qualificationID, courseList]) => (
+        <div key={qualificationID} style={{ marginBottom: '2rem' }}>
+          <h2>Qualification ID: {qualificationID}</h2>
+          <ul>
+            {courseList.map(course => (
+              <li key={course.course_ID}>
+                <strong>{course.course_TITLE}</strong> ({course.course_CODE})
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+
     <div className="td_height_112 td_height_lg_75" />
 
       <div className="container">
