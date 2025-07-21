@@ -9,7 +9,7 @@ import courseThumb4 from "../../assets/img/home_1/course_thumb_4.jpg";
 import courseThumb5 from "../../assets/img/home_1/course_thumb_5.jpg";
 import courseThumb6 from "../../assets/img/home_1/course_thumb_6.jpg";
 
-import { get } from '../../services/academics/CourseService';
+import { getCourse } from '../../services/academics/CourseService';
 
 const groupCoursesByQualificationID = (courses) => {
   return courses.reduce((acc, course) => {
@@ -30,7 +30,7 @@ export const CoursesOne = () => {
   useEffect(() => {
     const fetchCourses = async () => {
       try {
-        const result = groupCoursesByQualificationID(await get());
+        const result = groupCoursesByQualificationID(await getCourse());
         setCourses(result);
       } catch (err) {
         setError(err);
