@@ -112,7 +112,10 @@ export const HeaderOne = () => {
 
                       {/* last three */}
                       <ul className="td_nav_list">
-                        <li className="menu-item-has-children td_mega_menu">
+                            <li>
+                              <Link to="/event">Events</Link>
+                            </li>
+                        {/* <li className="menu-item-has-children td_mega_menu">
                           <Link to="#">Pages</Link>
                           <ul className="td_mega_wrapper">
                             <li className="menu-item-has-children">
@@ -173,10 +176,10 @@ export const HeaderOne = () => {
                               </ul>
                             </li>
                           </ul>
-                        </li>
-                        <li className="menu-item-has-children">
-                          <Link to="#">Blogs</Link>
-                          <ul>
+                        </li> */}
+                        <li>
+                          <Link to="/blog">Blogs</Link>
+                          {/* <ul>
                             <li>
                               <Link to="/blog">Blogs</Link>
                             </li>
@@ -188,7 +191,7 @@ export const HeaderOne = () => {
                             <li>
                               <Link to="/blog-details">Blog Details</Link>
                             </li>
-                          </ul>
+                          </ul> */}
                         </li>
                         <li>
                           <Link to="/contact">Contact</Link>

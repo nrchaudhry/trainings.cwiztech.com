@@ -14,7 +14,7 @@ export const FooterOne = () => {
                 <img src={footerLogo} alt="Logo" />
                 <p>
                   Far far away, behind the word mountains, far from the
-                  Consonantia, there live the blind texts.
+                  BETS, there live the blind texts.
                 </p>
               </div>
               <ul className="td_footer_address_widget td_medium td_mp_0">
@@ -30,7 +30,7 @@ export const FooterOne = () => {
             </div>
           </div>
           <div className="td_footer_col">
-            <div className="td_footer_widget">
+            {/* <div className="td_footer_widget">
               <h2 className="td_footer_widget_title td_fs_32 td_white_color td_medium td_mb_30">
                 Navigate
               </h2>
@@ -54,10 +54,10 @@ export const FooterOne = () => {
                   <Link to="/privacy">Privacy Policy</Link>
                 </li>
               </ul>
-            </div>
+            </div> */}
           </div>
           <div className="td_footer_col">
-            <div className="td_footer_widget">
+            {/* <div className="td_footer_widget">
               <h2 className="td_footer_widget_title td_fs_32 td_white_color td_medium td_mb_30">
                 Courses
               </h2>
@@ -81,7 +81,7 @@ export const FooterOne = () => {
                   <Link to="/course-details">Life Coach</Link>
                 </li>
               </ul>
-            </div>
+            </div> */}
           </div>
           <div className="td_footer_col">
             <div className="td_footer_widget">
