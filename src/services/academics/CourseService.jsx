@@ -1,7 +1,7 @@
 import { setting } from '../../settings';
 import Token from "../get-token"; 
 
-export const get = async () => {
+export const getCourse = async () => {
   const response = await Token.post('', {
     request_TYPE: 'GET',
     request_URI: `${setting.servicePath}course`,
@@ -21,7 +21,7 @@ export const get = async () => {
 return response;
 };
 
-export const getAll = async () => {
+export const getAllCourse = async () => {
   const response = await Token.post('', {
     request_TYPE: 'GET',
     request_URI: `${setting.servicePath}course/all`,
@@ -41,7 +41,7 @@ export const getAll = async () => {
 return response;
 };
 
-export const getOne = async (id) => {
+export const getOneCourse = async (id) => {
   const response = await Token.post('', {
     request_TYPE: 'GET',
     request_URI: `${setting.servicePath}course/${id}/detail`,
@@ -57,7 +57,7 @@ export const getOne = async (id) => {
 return response;
 };
 
-export const add = async (data) => {
+export const addCourse = async (data) => {
   const response = await Token.post('', {
     request_TYPE: 'POST',
     request_URI: `${setting.servicePath}course`,
@@ -77,7 +77,7 @@ export const add = async (data) => {
 return response;
 };
 
-export const update = async (data, id) => {
+export const updateCourse = async (data, id) => {
   const response = await Token.post('', {
     request_TYPE: 'PUT',
     request_URI: `${setting.servicePath}course/${id}`,
@@ -97,7 +97,7 @@ export const update = async (data, id) => {
 return response;
 };
 
-export const updateAll = async (data) => {
+export const updateAllCourse = async (data) => {
   const response = await Token.post('', {
     request_TYPE: 'PUT',
     request_URI: `${setting.servicePath}course`,
@@ -117,7 +117,7 @@ export const updateAll = async (data) => {
 return response;
 };
 
-export const deleteProduct = async (id) => {
+export const deleteProductCourse = async (id) => {
   const response = await Token.post('', {
     request_TYPE: 'DELETE',
     request_URI: `${setting.servicePath}course/${id}`,
@@ -137,7 +137,7 @@ export const deleteProduct = async (id) => {
 return response;
 };
 
-export const search = async (data) => {
+export const searchCourse = async (data) => {
   const response = await Token.post('', {
     request_TYPE: 'POST',
     request_URI: `${setting.servicePath}course/search`,
@@ -157,7 +157,7 @@ export const search = async (data) => {
 return response;
 };
 
-export const searchAll = async (data) => {
+export const searchAllCourse = async (data) => {
   const response = await Token.post('', {
     request_TYPE: 'POST',
     request_URI: `${setting.servicePath}course/search/all`,
@@ -177,7 +177,7 @@ export const searchAll = async (data) => {
 return response;
 };
 
-export const advancedSearch = async (data) => {
+export const advancedSearchCourse = async (data) => {
   const response = await Token.post('', {
     request_TYPE: 'POST',
     request_URI: `${setting.servicePath}course/advancedsearch`,
@@ -197,7 +197,7 @@ export const advancedSearch = async (data) => {
 return response;
 };
 
-export const advancedSearchAll = async (data) => {
+export const advancedSearchAllCourse = async (data) => {
   const response = await Token.post('', {
     request_TYPE: 'POST',
     request_URI: `${setting.servicePath}course/advancedsearch/all`,

@@ -1,7 +1,7 @@
 import { setting } from '../../settings';
 import Token from "../get-token"; 
 
-export const get = async () => {
+export const getLocation = async () => {
   const response = await Token.post('', {
     request_TYPE: 'GET',
     request_URI: `${setting.servicePath}location`,
@@ -9,19 +9,18 @@ export const get = async () => {
 })
     .then((response) => {
         if (response.data && response.data.length > 0) {
-            return response.data;
+            return getAllDetail(response.data);
         } else {
             return null;
         }
     })
     .catch((error) => {
-        console.log(JSON.stringify(error));
         return null;
     });
 return response;
 };
 
-export const getAll = async () => {
+export const getAllLocation = async () => {
   const response = await Token.post('', {
     request_TYPE: 'GET',
     request_URI: `${setting.servicePath}location/all`,
@@ -29,35 +28,33 @@ export const getAll = async () => {
 })
     .then((response) => {
         if (response.data && response.data.length > 0) {
-            return response.data;
+            return getAllDetail(response.data);
         } else {
             return null;
         }
     })
     .catch((error) => {
-        console.log(JSON.stringify(error));
         return null;
     });
 return response;
 };
 
-export const getOne = async (id) => {
+export const getOneLocation = async (id) => {
   const response = await Token.post('', {
     request_TYPE: 'GET',
     request_URI: `${setting.servicePath}location/${id}/detail`,
     request_BODY: ""
 })
     .then((response) => {
-        return response.data;
+        return getDetail(response.data);
     })
     .catch((error) => {
-        console.log(JSON.stringify(error));
         return null;
     });
 return response;
 };
 
-export const add = async (data) => {
+export const addLocation = async (data) => {
   const response = await Token.post('', {
     request_TYPE: 'POST',
     request_URI: `${setting.servicePath}location`,
@@ -65,19 +62,18 @@ export const add = async (data) => {
 })
     .then((response) => {
         if (response.data && response.data.length > 0) {
-            return response.data;
+            return getDetail(response.data);
         } else {
             return null;
         }
     })
     .catch((error) => {
-        console.log(JSON.stringify(error));
         return null;
     });
 return response;
 };
 
-export const update = async (data, id) => {
+export const updateLocation = async (data, id) => {
   const response = await Token.post('', {
     request_TYPE: 'PUT',
     request_URI: `${setting.servicePath}location/${id}`,
@@ -85,19 +81,18 @@ export const update = async (data, id) => {
 })
     .then((response) => {
         if (response.data && response.data.length > 0) {
-            return response.data;
+            return getDetail(response.data);
         } else {
             return null;
         }
     })
     .catch((error) => {
-        console.log(JSON.stringify(error));
         return null;
     });
 return response;
 };
 
-export const updateAll = async (data) => {
+export const updateAllLocation = async (data) => {
   const response = await Token.post('', {
     request_TYPE: 'PUT',
     request_URI: `${setting.servicePath}location`,
@@ -105,19 +100,18 @@ export const updateAll = async (data) => {
 })
     .then((response) => {
         if (response.data && response.data.length > 0) {
-            return response.data;
+            return getAllDetail(response.data);
         } else {
             return null;
         }
     })
     .catch((error) => {
-        console.log(JSON.stringify(error));
         return null;
     });
 return response;
 };
 
-export const deleteProduct = async (id) => {
+export const deleteProductLocation = async (id) => {
   const response = await Token.post('', {
     request_TYPE: 'DELETE',
     request_URI: `${setting.servicePath}location/${id}`,
@@ -125,19 +119,18 @@ export const deleteProduct = async (id) => {
 })
     .then((response) => {
         if (response.data && response.data.length > 0) {
-            return response.data;
+            return getDetail(response.data);
         } else {
             return null;
         }
     })
     .catch((error) => {
-        console.log(JSON.stringify(error));
         return null;
     });
 return response;
 };
 
-export const search = async (data) => {
+export const searchLocation = async (data) => {
   const response = await Token.post('', {
     request_TYPE: 'POST',
     request_URI: `${setting.servicePath}location/search`,
@@ -145,19 +138,18 @@ export const search = async (data) => {
 })
     .then((response) => {
         if (response.data && response.data.length > 0) {
-            return response.data;
+            return getAllDetail(response.data);
         } else {
             return null;
         }
     })
     .catch((error) => {
-        console.log(JSON.stringify(error));
         return null;
     });
 return response;
 };
 
-export const searchAll = async (data) => {
+export const searchAllLocation = async (data) => {
   const response = await Token.post('', {
     request_TYPE: 'POST',
     request_URI: `${setting.servicePath}location/search/all`,
@@ -165,19 +157,18 @@ export const searchAll = async (data) => {
 })
     .then((response) => {
         if (response.data && response.data.length > 0) {
-            return response.data;
+            return getAllDetail(response.data);
         } else {
             return null;
         }
     })
     .catch((error) => {
-        console.log(JSON.stringify(error));
         return null;
     });
 return response;
 };
 
-export const advancedSearch = async (data) => {
+export const advancedSearchLocation = async (data) => {
   const response = await Token.post('', {
     request_TYPE: 'POST',
     request_URI: `${setting.servicePath}location/advancedsearch`,
@@ -185,19 +176,18 @@ export const advancedSearch = async (data) => {
 })
     .then((response) => {
         if (response.data && response.data.length > 0) {
-            return response.data;
+            return getAllDetail(response.data);
         } else {
             return null;
         }
     })
     .catch((error) => {
-        console.log(JSON.stringify(error));
         return null;
     });
 return response;
 };
 
-export const advancedSearchAll = async (data) => {
+export const advancedSearchAllLocation = async (data) => {
   const response = await Token.post('', {
     request_TYPE: 'POST',
     request_URI: `${setting.servicePath}location/advancedsearch/all`,
@@ -205,13 +195,12 @@ export const advancedSearchAll = async (data) => {
 })
     .then((response) => {
         if (response.data && response.data.length > 0) {
-            return response.data;
+            return getAllDetail(response.data);
         } else {
             return null;
         }
     })
     .catch((error) => {
-        console.log(JSON.stringify(error));
         return null;
     });
 return response;

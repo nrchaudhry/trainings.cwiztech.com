@@ -1,7 +1,7 @@
 import { setting } from '../../settings';
 import Token from "../get-token"; 
 
-export const get = async () => {
+export const getQualification = async () => {
   const response = await Token.post('', {
     request_TYPE: 'GET',
     request_URI: `${setting.servicePath}qualification`,
@@ -21,7 +21,7 @@ export const get = async () => {
 return response;
 };
 
-export const getAll = async () => {
+export const getAllQualification = async () => {
   const response = await Token.post('', {
     request_TYPE: 'GET',
     request_URI: `${setting.servicePath}qualification/all`,
@@ -41,7 +41,7 @@ export const getAll = async () => {
 return response;
 };
 
-export const getOne = async (id) => {
+export const getOneQualification = async (id) => {
   const response = await Token.post('', {
     request_TYPE: 'GET',
     request_URI: `${setting.servicePath}qualification/${id}/detail`,
@@ -57,7 +57,7 @@ export const getOne = async (id) => {
 return response;
 };
 
-export const add = async (data) => {
+export const addQualification = async (data) => {
   const response = await Token.post('', {
     request_TYPE: 'POST',
     request_URI: `${setting.servicePath}qualification`,
@@ -77,7 +77,7 @@ export const add = async (data) => {
 return response;
 };
 
-export const update = async (data, id) => {
+export const updateQualification = async (data, id) => {
   const response = await Token.post('', {
     request_TYPE: 'PUT',
     request_URI: `${setting.servicePath}qualification/${id}`,
@@ -97,7 +97,7 @@ export const update = async (data, id) => {
 return response;
 };
 
-export const updateAll = async (data) => {
+export const updateAllQualification = async (data) => {
   const response = await Token.post('', {
     request_TYPE: 'PUT',
     request_URI: `${setting.servicePath}qualification`,
@@ -117,7 +117,7 @@ export const updateAll = async (data) => {
 return response;
 };
 
-export const deleteProduct = async (id) => {
+export const deleteProductQualification = async (id) => {
   const response = await Token.post('', {
     request_TYPE: 'DELETE',
     request_URI: `${setting.servicePath}qualification/${id}`,
@@ -137,7 +137,7 @@ export const deleteProduct = async (id) => {
 return response;
 };
 
-export const search = async (data) => {
+export const searchQualification = async (data) => {
   const response = await Token.post('', {
     request_TYPE: 'POST',
     request_URI: `${setting.servicePath}qualification/search`,
@@ -157,7 +157,7 @@ export const search = async (data) => {
 return response;
 };
 
-export const searchAll = async (data) => {
+export const searchAllQualification = async (data) => {
   const response = await Token.post('', {
     request_TYPE: 'POST',
     request_URI: `${setting.servicePath}qualification/search/all`,
@@ -177,7 +177,7 @@ export const searchAll = async (data) => {
 return response;
 };
 
-export const advancedSearch = async (data) => {
+export const advancedSearchQualification = async (data) => {
   const response = await Token.post('', {
     request_TYPE: 'POST',
     request_URI: `${setting.servicePath}qualification/advancedsearch`,
@@ -197,7 +197,7 @@ export const advancedSearch = async (data) => {
 return response;
 };
 
-export const advancedSearchAll = async (data) => {
+export const advancedSearchAllQualification = async (data) => {
   const response = await Token.post('', {
     request_TYPE: 'POST',
     request_URI: `${setting.servicePath}qualification/advancedsearch/all`,

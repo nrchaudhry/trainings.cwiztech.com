@@ -9,7 +9,7 @@ export const getUniversities = async () => {
     request_BODY: ''
     }).then((response) => {
         if (response.data && response.data.length > 0) {
-            return response.data;
+            return getAllDetail(response.data);
         } else {
             return null;
         }
@@ -29,7 +29,7 @@ export const getAllUniversities = async () => {
 })
     .then((response) => {
         if (response.data && response.data.length > 0) {
-            return response.data;
+            return getAllDetail(response.data);
         } else {
             return null;
         }
@@ -48,7 +48,7 @@ export const getOneUniversity = async (id) => {
     request_BODY: ""
 })
     .then((response) => {
-        return response.data;
+        return getAllDetail(response.data);
     })
     .catch((error) => {
         console.log(JSON.stringify(error));
@@ -65,7 +65,7 @@ export const addUniversity = async (data) => {
 })
     .then((response) => {
         if (response.data && response.data.length > 0) {
-            return response.data;
+            return getAllDetail(response.data);
         } else {
             return null;
         }
@@ -85,7 +85,7 @@ export const updateUniversity = async (data, id) => {
 })
     .then((response) => {
         if (response.data && response.data.length > 0) {
-            return response.data;
+            return getAllDetail(response.data);
         } else {
             return null;
         }
@@ -105,7 +105,7 @@ export const updateAllUniversites = async (data) => {
 })
     .then((response) => {
         if (response.data && response.data.length > 0) {
-            return response.data;
+            return getAllDetail(response.data);
         } else {
             return null;
         }
@@ -125,7 +125,7 @@ export const deleteProduct = async (id) => {
 })
     .then((response) => {
         if (response.data && response.data.length > 0) {
-            return response.data;
+            return getAllDetail(response.data);
         } else {
             return null;
         }
@@ -145,7 +145,7 @@ export const search = async (data) => {
 })
     .then((response) => {
         if (response.data && response.data.length > 0) {
-            return response.data;
+            return getAllDetail(response.data);
         } else {
             return null;
         }
@@ -165,7 +165,7 @@ export const searchAll = async (data) => {
 })
     .then((response) => {
         if (response.data && response.data.length > 0) {
-            return response.data;
+            return getAllDetail(response.data);
         } else {
             return null;
         }
@@ -185,7 +185,7 @@ export const advancedSearch = async (data) => {
 })
     .then((response) => {
         if (response.data && response.data.length > 0) {
-            return response.data;
+            return getAllDetail(response.data);
         } else {
             return null;
         }
@@ -205,7 +205,7 @@ export const advancedSearchAll = async (data) => {
 })
     .then((response) => {
         if (response.data && response.data.length > 0) {
-            return response.data;
+            return getAllDetail(response.data);
         } else {
             return null;
         }
