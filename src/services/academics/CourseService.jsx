@@ -15,7 +15,6 @@ export const getCourse = async () => {
         }
     })
     .catch((error) => {
-        console.log(JSON.stringify(error));
         return null;
     });
 return response;
@@ -35,7 +34,6 @@ export const getAllCourse = async () => {
         }
     })
     .catch((error) => {
-        console.log(JSON.stringify(error));
         return null;
     });
 return response;
@@ -51,7 +49,6 @@ export const getOneCourse = async (id) => {
         return response.data;
     })
     .catch((error) => {
-        console.log(JSON.stringify(error));
         return null;
     });
 return response;
@@ -71,7 +68,6 @@ export const addCourse = async (data) => {
         }
     })
     .catch((error) => {
-        console.log(JSON.stringify(error));
         return null;
     });
 return response;
@@ -91,7 +87,6 @@ export const updateCourse = async (data, id) => {
         }
     })
     .catch((error) => {
-        console.log(JSON.stringify(error));
         return null;
     });
 return response;
@@ -111,7 +106,6 @@ export const updateAllCourse = async (data) => {
         }
     })
     .catch((error) => {
-        console.log(JSON.stringify(error));
         return null;
     });
 return response;
@@ -131,7 +125,6 @@ export const deleteProductCourse = async (id) => {
         }
     })
     .catch((error) => {
-        console.log(JSON.stringify(error));
         return null;
     });
 return response;
@@ -151,7 +144,6 @@ export const searchCourse = async (data) => {
         }
     })
     .catch((error) => {
-        console.log(JSON.stringify(error));
         return null;
     });
 return response;
@@ -171,7 +163,6 @@ export const searchAllCourse = async (data) => {
         }
     })
     .catch((error) => {
-        console.log(JSON.stringify(error));
         return null;
     });
 return response;
@@ -191,7 +182,6 @@ export const advancedSearchCourse = async (data) => {
         }
     })
     .catch((error) => {
-        console.log(JSON.stringify(error));
         return null;
     });
 return response;
@@ -211,7 +201,6 @@ export const advancedSearchAllCourse = async (data) => {
         }
     })
     .catch((error) => {
-        console.log(JSON.stringify(error));
         return null;
     });
 return response;
@@ -222,7 +211,6 @@ export const getAllDetail = (response) => {
 };
 
 export const getDetail = (response) => {
-console.log(response);
   if (response.qualification_DETAIL) {
     response.qualification = getDetail(JSON.parse(response.qualification_DETAIL));
     response.qualification_DETAIL = `${response.qualification.qualification_CODE} - ${response.qualification.qualification_NAME}`;

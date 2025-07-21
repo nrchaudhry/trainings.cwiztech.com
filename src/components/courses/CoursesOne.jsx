@@ -11,54 +11,48 @@ import courseThumb6 from "../../assets/img/home_1/course_thumb_6.jpg";
 
 import { getCourse } from '../../services/academics/CourseService';
 
-const groupCoursesByQualificationID = (courses) => {
-  return courses.reduce((acc, course) => {
-    const id = course.qualification_ID;
-    if (!acc[id]) {
-      acc[id] = [];
-    }
-    acc[id].push(course);
-    return acc;
-  }, {});
-};
-
 export const CoursesOne = () => {
   const [courses, setCourses] = useState(null);
+  const [activeQualificationID, setActiveQualificationID] = useState(null);
 
-  useTabs();
-
+  // Fetch courses data from API
   useEffect(() => {
     const fetchCourses = async () => {
       try {
-        const result = groupCoursesByQualificationID(await getCourse());
+        const result = await getCourse();
         setCourses(result);
+
+        const groupedCourses = groupCoursesByQualification(result);
+        const firstQualificationID = Object.keys(groupedCourses)[0];
+        setActiveQualificationID(firstQualificationID); // Set first qualification as active
       } catch (err) {
-        setError(err);
-      } finally {
-        setLoading(false);
+        console.error("Error fetching courses", err);
       }
     };
-
     fetchCourses();
-    console.log(courses);
   }, []);
+
+  // Handle tab click (qualification selection)
+  const handleQualificationClick = (qualificationID) => {
+    setActiveQualificationID(qualificationID);
+  };
+
+  // Group courses by qualification ID
+  const groupCoursesByQualification = (courses) => {
+    return courses.reduce((acc, course) => {
+      const id = course.qualification_ID;
+      if (!acc[id]) {
+        acc[id] = [];
+      }
+      acc[id].push(course);
+      return acc;
+    }, {});
+  };
+
+  const groupedCourses = courses ? groupCoursesByQualification(courses) : {};
 
   return (
     <section className="td_gray_bg_3">
-    <div>
-      {Object.entries(courses).map(([qualificationID, courseList]) => (
-        <div key={qualificationID} style={{ marginBottom: '2rem' }}>
-          <h2>Qualification ID: {qualificationID}</h2>
-          <ul>
-            {courseList.map(course => (
-              <li key={course.course_ID}>
-                <strong>{course.course_TITLE}</strong> ({course.course_CODE})
-              </li>
-            ))}
-          </ul>
-        </div>
-      ))}
-    </div>
 
     <div className="td_height_112 td_height_lg_75" />
 
@@ -76,74 +70,55 @@ export const CoursesOne = () => {
         </div>
         <div className="td_height_30 td_height_lg_30" />
 
-        {/* tabs */}
+        {/* Qualifications List (Tabs) */}
         <div className="td_tabs">
           <ul
             className="td_tab_links td_style_1 td_mp_0 td_fs_20 td_medium td_heading_color wow fadeInUp"
             data-wow-duration="1s"
             data-wow-delay="0.2s"
           >
-            <li className="active">
-              <a href="#tab_1">Intermediate / A Levels</a>
-            </li>
-            <li>
-              <a href="#tab_2">Undergraduate</a>
-            </li>
-            <li>
-              <a href="#tab_3">HND Level 5 courses</a>
-            </li>
-            <li>
-              <a href="#tab_4">IELTS / PTE / German / Spanish </a>
-            </li>
-          </ul>
-          <div className="td_height_50 td_height_lg_50" />
+          {courses &&
+            Object.entries(groupedCourses).map(([qualificationID, courseList]) => (
+              <li
+                key={qualificationID}
+                className={activeQualificationID === qualificationID ? 'active' : ''}
+              >
+                <a
+                  href={`#tab_${qualificationID}`}
+                  onClick={() => handleQualificationClick(qualificationID)}
+                >
+                  {courseList[0].qualification.qualification_NAME}
+                </a>
+              </li>
+            ))}
+        </ul>
 
-          <div className="td_tab_body">
-            <div className="td_tab active" id="tab_1">
-              <div className="row td_gap_y_24">
-                {coursesUndergrad.map((course, idx) => (
-                  <div
-                    key={idx}
-                    className="col-lg-4 col-md-6 wow fadeInUp"
-                    data-wow-duration="1s"
-                    data-wow-delay="0.2s"
-                  >
-                    <CoursesOneItem {...course} />
-                  </div>
-                ))}
-              </div>
-            </div>
+        <div className="td_height_50 td_height_lg_50" />
 
-            <div className="td_tab" id="tab_2">
-              <div className="row td_gap_y_24">
-                {coursesGraduate.map((course, idx) => (
-                  <div key={idx} className="col-lg-4 col-md-6">
-                    <CoursesOneItem {...course} />
-                  </div>
-                ))}
+        {/* Qualification Content */}
+        <div className="td_tab_body">
+          {courses &&
+            Object.entries(groupedCourses).map(([qualificationID, courseList]) => (
+              <div
+                key={qualificationID}
+                className={`td_tab ${activeQualificationID === qualificationID ? 'active' : ''}`}
+                id={`tab_${qualificationID}`}
+              >
+                <div className="row td_gap_y_24">
+                  {courseList.map((course, idx) => (
+                    <div
+                      key={idx}
+                      className="col-lg-4 col-md-6 wow fadeInUp"
+                      data-wow-duration="1s"
+                      data-wow-delay="0.2s"
+                    >
+                      <CoursesOneItem {...course} />
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
-
-            <div className="td_tab" id="tab_3">
-              <div className="row td_gap_y_24">
-                {coursesOnline.map((course, idx) => (
-                  <div key={idx} className="col-lg-4 col-md-6">
-                    <CoursesOneItem {...course} />
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="td_tab" id="tab_4">
-              <div className="row td_gap_y_24">
-                {coursesShort.map((course, idx) => (
-                  <div key={idx} className="col-lg-4 col-md-6">
-                    <CoursesOneItem {...course} />
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
+            ))}
+        </div>
         </div>
       </div>
 
