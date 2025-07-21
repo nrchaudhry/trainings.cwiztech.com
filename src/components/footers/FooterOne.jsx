@@ -20,12 +20,11 @@ export const FooterOne = () => {
               <ul className="td_footer_address_widget td_medium td_mp_0">
                 <li>
                   <i className="fa-solid fa-phone-volume"></i>
-                  <a href="cal:+23(000)68603">+23 (000) 68 603</a>
+                  <a href="cal:+23(000)68603">+92 (042) 35883281-2</a>
                 </li>
                 <li>
-                  <i className="fa-solid fa-location-dot"></i>66 broklyn golden
-                  street <br />
-                  600 New york. USA
+                  <i className="fa-solid fa-location-dot"></i>6A New Muslim Town<br />
+                    (Facing Canal), Lahore, Pakistan
                 </li>
               </ul>
             </div>
@@ -132,7 +131,7 @@ export const FooterOne = () => {
         <div className="container">
           <div className="td_footer_bottom_in">
             <p className="td_copyright mb-0">
-              Copyright ©educve | All Right Reserved
+              Copyright ©CWIZTECH | All Right Reserved
             </p>
             <ul className="td_footer_widget_menu">
               <li>
