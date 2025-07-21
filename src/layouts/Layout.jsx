@@ -22,7 +22,7 @@ import { Breadcrumb } from "../components/breadcrumb/Breadcrumb";
 
 export const Layout = ({
   children,
-  header = 9,
+  header = 1,
   footer = 1,
   bodyClass,
   breadcrumbTitle,
