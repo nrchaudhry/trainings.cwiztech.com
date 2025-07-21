@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from 'react';
 import { useTabs } from "../../lib/hooks/useTabs";
 import { CoursesOneItem } from "./CoursesOneItem";
 
@@ -9,12 +9,43 @@ import courseThumb4 from "../../assets/img/home_1/course_thumb_4.jpg";
 import courseThumb5 from "../../assets/img/home_1/course_thumb_5.jpg";
 import courseThumb6 from "../../assets/img/home_1/course_thumb_6.jpg";
 
+import { get } from '../../services/academics/CourseService';
+
+const groupCoursesByQualificationID = (courses) => {
+  return courses.reduce((acc, course) => {
+    const id = course.qualification_ID;
+    if (!acc[id]) {
+      acc[id] = [];
+    }
+    acc[id].push(course);
+    return acc;
+  }, {});
+};
+
 export const CoursesOne = () => {
+  const [courses, setCourses] = useState(null);
+
   useTabs();
+
+  useEffect(() => {
+    const fetchCourses = async () => {
+      try {
+        const result = groupCoursesByQualificationID(await get());
+        setCourses(result);
+      } catch (err) {
+        setError(err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchCourses();
+    console.log(courses);
+  }, []);
 
   return (
     <section className="td_gray_bg_3">
-      <div className="td_height_112 td_height_lg_75" />
+    <div className="td_height_112 td_height_lg_75" />
 
       <div className="container">
         {/* header */}
