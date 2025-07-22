@@ -31,6 +31,7 @@ import { Blog } from "./pages/blogs/Blog";
 import { BlogWithSidebar } from "./pages/blogs/BlogWithSidebar";
 import { BlogDetails } from "./pages/blogs/BlogDetails";
 import { Contact } from "./pages/contact/Contact";
+// import { CoursesProvider } from './contexts/coursescontext';
 
 function App() {
   useWow();
@@ -49,6 +50,7 @@ function App() {
       <Route path="/home-v6" element={<HomeSix />} />
       <Route path="/home-v7" element={<HomeSeven />} />
       <Route path="/home-v8" element={<HomeEight />} />
+      <Route path="/course-details" element={<CourseDetails />} />
       <Route path="/courses-grid-view" element={<CoursesGridView />} />
       <Route path="/courses-list-view" element={<CoursesListView />} />
       <Route
