@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useTabs } from "../../lib/hooks/useTabs";
 import { CoursesOneItem } from "./CoursesOneItem";
-import { useCoursesData } from "../../hooks/useCoursesData";
 
 import courseThumb1 from "../../assets/img/home_1/course_thumb_1.jpg";
 import courseThumb2 from "../../assets/img/home_1/course_thumb_2.jpg";
@@ -9,101 +8,56 @@ import courseThumb3 from "../../assets/img/home_1/course_thumb_3.jpg";
 import courseThumb4 from "../../assets/img/home_1/course_thumb_4.jpg";
 import courseThumb5 from "../../assets/img/home_1/course_thumb_5.jpg";
 import courseThumb6 from "../../assets/img/home_1/course_thumb_6.jpg";
-import { useCourses } from "../../contexts/coursecontext";
+
+import { getCourse } from '../../services/academics/CourseService';
 
 export const CoursesOne = () => {
-  let [activeQualificationID, setActiveQualificationID] = useState(null);
-  
-  // Using custom hook instead  direct API calls
-  const {
-    courses,
-    loading,
-    error,
-    groupedCourses,
-    qualifications
-  } = useCoursesData({
-    autoLoad: true,
-    sortBy: 'course_TITLE',
-    sortOrder: 'asc'
-  });
+  const [courses, setCourses] = useState(null);
+  const [activeQualificationID, setActiveQualificationID] = useState(null);
 
-  // Set first qualification as active when data loads
+  // Fetch courses data from API
   useEffect(() => {
-    if (Object.keys(groupedCourses).length > 0 && !activeQualificationID) {
-      const firstQualificationID = Object.keys(groupedCourses)[0];
-      setActiveQualificationID(firstQualificationID);
-    }
-  }, [groupedCourses, activeQualificationID]);
+    const fetchCourses = async () => {
+      try {
+        const result = await getCourse();
+        setCourses(result);
+
+        const groupedCourses = groupCoursesByQualification(result);
+        const firstQualificationID = Object.keys(groupedCourses)[0];
+        setActiveQualificationID(firstQualificationID); // Set first qualification as active
+      } catch (err) {
+        console.error("Error fetching courses", err);
+      }
+    };
+    fetchCourses();
+  }, []);
 
   // Handle tab click (qualification selection)
   const handleQualificationClick = (qualificationID) => {
     setActiveQualificationID(qualificationID);
   };
 
-  // Loading state
-  if (loading) {
-    return (
-      <section className="td_gray_bg_3">
-        <div className="td_height_112 td_height_lg_75" />
-        <div className="container">
-          <div className="text-center">
-            <div className="spinner-border" role="status">
-              <span className="visually-hidden">Loading courses...</span>
-            </div>
-            <p className="mt-3">Loading courses...</p>
-          </div>
-        </div>
-        <div className="td_height_120 td_height_lg_80" />
-      </section>
-    );
-  }
+  // Group courses by qualification ID
+  const groupCoursesByQualification = (courses) => {
+    return courses.reduce((acc, course) => {
+      const id = course.qualification_ID;
+      if (!acc[id]) {
+        acc[id] = [];
+      }
+      acc[id].push(course);
+      return acc;
+    }, {});
+  };
 
-  // Error state
-  if (error) {
-    return (
-      <section className="td_gray_bg_3">
-        <div className="td_height_112 td_height_lg_75" />
-        <div className="container">
-          <div className="text-center">
-            <div className="alert alert-danger" role="alert">
-              <h4>Error Loading Courses</h4>
-              <p>{error}</p>
-              <button 
-                className="btn btn-primary" 
-                onClick={() => window.location.reload()}
-              >
-                Retry
-              </button>
-            </div>
-          </div>
-        </div>
-        <div className="td_height_120 td_height_lg_80" />
-      </section>
-    );
-  }
-
-  // No courses state
-  if (!courses || courses.length === 0) {
-    return (
-      <section className="td_gray_bg_3">
-        <div className="td_height_112 td_height_lg_75" />
-        <div className="container">
-          <div className="text-center">
-            <h3>No courses available at the moment</h3>
-            <p>Please check back later.</p>
-          </div>
-        </div>
-        <div className="td_height_120 td_height_lg_80" />
-      </section>
-    );
-  }
+  const groupedCourses = courses ? groupCoursesByQualification(courses) : {};
 
   return (
     <section className="td_gray_bg_3">
-      <div className="td_height_112 td_height_lg_75" />
+
+    <div className="td_height_112 td_height_lg_75" />
 
       <div className="container">
-        {/* Header */}
+        {/* header */}
         <div
           className="td_section_heading td_style_1 text-center wow fadeInUp"
           data-wow-duration="1s"
@@ -123,29 +77,28 @@ export const CoursesOne = () => {
             data-wow-duration="1s"
             data-wow-delay="0.2s"
           >
-            {Object.entries(groupedCourses).map(([qualificationID, courseList]) => (
+          {courses &&
+            Object.entries(groupedCourses).map(([qualificationID, courseList]) => (
               <li
                 key={qualificationID}
                 className={activeQualificationID === qualificationID ? 'active' : ''}
               >
                 <a
                   href={`#tab_${qualificationID}`}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    handleQualificationClick(qualificationID);
-                  }}
+                  onClick={() => handleQualificationClick(qualificationID)}
                 >
-                  {courseList[0]?.qualification?.qualification_NAME || 'Unknown Qualification'}
+                  {courseList[0].qualification.qualification_NAME}
                 </a>
               </li>
             ))}
-          </ul>
+        </ul>
 
-          <div className="td_height_50 td_height_lg_50" />
+        <div className="td_height_50 td_height_lg_50" />
 
-          {/* Qualification Content */}
-          <div className="td_tab_body">
-            {Object.entries(groupedCourses).map(([qualificationID, courseList]) => (
+        {/* Qualification Content */}
+        <div className="td_tab_body">
+          {courses &&
+            Object.entries(groupedCourses).map(([qualificationID, courseList]) => (
               <div
                 key={qualificationID}
                 className={`td_tab ${activeQualificationID === qualificationID ? 'active' : ''}`}
@@ -154,7 +107,7 @@ export const CoursesOne = () => {
                 <div className="row td_gap_y_24">
                   {courseList.map((course, idx) => (
                     <div
-                      key={course.course_ID || idx}
+                      key={idx}
                       className="col-lg-4 col-md-6 wow fadeInUp"
                       data-wow-duration="1s"
                       data-wow-delay="0.2s"
@@ -165,7 +118,7 @@ export const CoursesOne = () => {
                 </div>
               </div>
             ))}
-          </div>
+        </div>
         </div>
       </div>
 
@@ -173,7 +126,6 @@ export const CoursesOne = () => {
     </section>
   );
 };
-
 
 const coursesUndergrad = [
   {
