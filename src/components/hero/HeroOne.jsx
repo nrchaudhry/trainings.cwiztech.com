@@ -20,10 +20,10 @@ export const HeroOne = () => {
               Knowledge is Power
             </p>
             <h1 className="td_hero_title td_fs_64 td_white_color td_mb_12">
-              <span>BETS</span> - The Best Place to Invest in your Knowledge
+              <span>CWIZTECH</span> - The Best Place to Invest in your Knowledge
             </h1>
             <p className="td_hero_subtitle td_fs_18 td_white_color td_opacity_7 td_mb_30">
-              A BETS is a vibrant institution that serves as a hub for
+              A CWIZTECH is a vibrant institution that serves as a hub for
               higher education and research. It provides a dynamic environment.
             </p>
             <Link

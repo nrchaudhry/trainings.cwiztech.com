@@ -14,7 +14,7 @@ export const DepartmentOne = () => {
             Departments
           </p>
           <h2 className="td_section_title td_fs_48 mb-0">
-            Featured BETS Programs
+            Featured CWIZTECH Programs
           </h2>
           <p className="td_section_subtitle td_fs_18 mb-0">
             Discover top-tier education and training programs at British Education & Training Systems, <br />

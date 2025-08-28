@@ -14,7 +14,7 @@ export const FooterOne = () => {
                 <img src={footerLogo} alt="Logo" />
                 <p>
                   Far far away, behind the word mountains, far from the
-                  BETS, there live the blind texts.
+                  CWIZTECH, there live the blind texts.
                 </p>
               </div>
               <ul className="td_footer_address_widget td_medium td_mp_0">

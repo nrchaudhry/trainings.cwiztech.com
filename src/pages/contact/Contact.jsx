@@ -33,7 +33,7 @@ export const Contact = () => {
                         <a href="tel:+1(310)620-8565">+92 (042) 35883281-2</a>
                       </p>
                       <p className="td_fs_18 td_heading_color td_medium mb-0 td_opacity_7">
-                        <a href="mailto:info@gmail.com">info@bets.edu.pk</a>
+                        <a href="mailto:info@gmail.com">info@CWIZTECH.edu.pk</a>
                       </p>
                     </div>
                     {/* <div>

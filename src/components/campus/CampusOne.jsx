@@ -61,7 +61,7 @@ export const CampusOne = () => {
                 Our Specialties
               </h2>
               <p className="td_section_subtitle td_fs_18 mb-0 text-white">
-                At British Education & Training Systems (BETS), we pride ourselves on delivering exceptional education tailored to diverse needs.
+                At British Education & Training Systems (CWIZTECH), we pride ourselves on delivering exceptional education tailored to diverse needs.
               </p>
             </div>
             <div className="td_btn_box">

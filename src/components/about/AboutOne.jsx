@@ -67,7 +67,7 @@ export const AboutOne = () => {
                   High-Quality Education & Training
                 </h2>
                 <p className="td_section_subtitle td_fs_18 mb-0 text-gray-600">
-                  At British Education & Training Systems (BETS), we are committed to providing high-quality educational programmes with professional training designed to meet the diverse needs of our students. With a focus on academic excellence and practical skills development, we offer a range of courses that empower individuals to achieve their career goals and personal growth.
+                  At British Education & Training Systems (CWIZTECH), we are committed to providing high-quality educational programmes with professional training designed to meet the diverse needs of our students. With a focus on academic excellence and practical skills development, we offer a range of courses that empower individuals to achieve their career goals and personal growth.
                 </p>
               </div>
               <div className="td_mb_40">
