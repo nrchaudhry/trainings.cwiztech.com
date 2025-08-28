@@ -49,7 +49,7 @@ export const VideoOne = () => {
               Get In Touch:
             </p>
             <h3 className="td_fs_36 mb-0 td_white_color">
-              <a href="mailto:info@CWIZTECH.edu.uk">info@CWIZTECH.edu.uk</a>
+              <a href="mailto:info@cwiztech.edu.uk">info@cwiztech.edu.uk</a>
             </h3>
           </div>
           <div className="td_contact_box_or td_fs_24 td_medium td_white_bg td_white_bg td_center rounded-circle td_accent_color">
