@@ -19,7 +19,7 @@ export const AboutOne = () => {
             >
               <div className="td_about_thumb_wrap">
                 <div className="td_about_year text-uppercase td_fs_64 td_bold text-green-700">
-                  EST 1996
+                  EST 2000
                 </div>
                 <div className="td_about_thumb_1">
                   <img src={aboutImg1} alt="About" />
@@ -60,28 +60,36 @@ export const AboutOne = () => {
               data-wow-delay="0.3s"
             >
               <div className="td_section_heading td_style_1 td_mb_30">
-                <p className="td_section_subtitle_up td_fs_18 td_semibold td_spacing_1 td_mb_10 text-uppercase text-green-700">
+                <p className="td_section_subtitle_up td_fs_20 td_bold td_spacing_1 td_mb_10 text-uppercase text-green-700">
                   About Us
                 </p>
                 <h2 className="td_section_title td_fs_48 mb-0 text-gray-800">
-                  High-Quality Education & Training
+                  Practical Tech Education & Training
                 </h2>
                 <p className="td_section_subtitle td_fs_18 mb-0 text-gray-600">
-                  At British Education & Training Systems (CWIZTECH), we are committed to providing high-quality educational programmes with professional training designed to meet the diverse needs of our students. With a focus on academic excellence and practical skills development, we offer a range of courses that empower individuals to achieve their career goals and personal growth.
+                  At Compuwiz Technologies (Cwiztech), we specialize in providing 
+                  high-quality training programs in IT, Software Development, UI/UX Design, 
+                  and emerging technologies. Our goal is to equip learners with practical 
+                  skills, hands-on experience, and industry-relevant knowledge to help them 
+                  excel in their careers.
                 </p>
               </div>
               <div className="td_mb_40">
                 <ul className="td_list td_style_5 td_mp_0">
                   <li>
-                    <h3 className="td_fs_24 td_mb_8 text-gray-800">Diverse Courses</h3>
+                    <h3 className="td_fs_24 td_mb_8 text-gray-800">Industry-Relevant Trainings</h3>
                     <p className="td_fs_18 mb-0 text-gray-600">
-                      We provide a wide range of programmes, from business and language courses to professional certification, ensuring our students meet the demands of the job market.
-                    </p>
+                       From beginner to advanced levels, our programs cover the latest tools 
+                        and technologies to prepare students for real-world projects and 
+                        professional growth.
+                      
+                      </p>
                   </li>
                   <li>
-                    <h3 className="td_fs_24 td_mb_8 text-gray-800">Flexible Learning</h3>
+                    <h3 className="td_fs_24 td_mb_8 text-gray-800">Flexible Learning Options</h3>
                     <p className="td_fs_18 mb-0 text-gray-600">
-                      Our part-time, evening, and online courses allow students to balance education with their busy lives.
+                      With in-person, evening, and online training, we make it easy for 
+                       learners to balance skill development with work and personal life.
                     </p>
                   </li>
                 </ul>

@@ -27,10 +27,10 @@ export const FeatureOne = () => {
           >
             <div className="td_section_heading td_style_1">
               <p className="td_section_subtitle_up td_fs_18 td_semibold td_spacing_1 td_mb_10 text-uppercase td_accent_color">
-                CAMPUS
+                TRAININGS
               </p>
               <h2 className="td_section_title td_fs_48 mb-0">
-                Campus is your Dream Lifestyle
+                Trainings for your Dream Lifestyle
               </h2>
             </div>
 
@@ -70,11 +70,10 @@ export const FeatureOne = () => {
                 </div>
                 <div className="td_feature_info">
                   <h3 className="td_fs_32 td_semibold td_mb_15">
-                    Smart Hostel
+                    Your Gateway to Tech
                   </h3>
                   <p className="td_fs_14 td_heading_color td_opacity_7 mb-0">
-                    Behind the word mountains, far from the Conso there live the
-                    blind texts
+                    Learn from industry experts with practical, hands-on training in IT, Software Development, UI/UX, Cloud, AI, and more.
                   </p>
                 </div>
               </li>
@@ -130,11 +129,10 @@ export const FeatureOne = () => {
                 </div>
                 <div className="td_feature_info">
                   <h3 className="td_fs_32 td_semibold td_mb_15">
-                    Student Life
+                    Practical Learning
                   </h3>
                   <p className="td_fs_14 td_heading_color td_opacity_7 mb-0">
-                    Behind the word mountains, far from the Conso there live the
-                    blind texts
+                    Our training programs are designed to give you real-world experience, not just theory. Build projects, solve problems, and prepare for your career.
                   </p>
                 </div>
               </li>
@@ -163,11 +161,10 @@ export const FeatureOne = () => {
                 </div>
                 <div className="td_feature_info">
                   <h3 className="td_fs_32 td_semibold td_mb_15">
-                    Arts & Clubs
+                    Expert Instructors
                   </h3>
                   <p className="td_fs_14 td_heading_color td_opacity_7 mb-0">
-                    Behind the word mountains, far from the Conso there live the
-                    blind texts
+                    Learn directly from professionals who have real industry knowledge and are passionate about teaching.
                   </p>
                 </div>
               </li>
@@ -348,11 +345,10 @@ export const FeatureOne = () => {
                 </div>
                 <div className="td_feature_info">
                   <h3 className="td_fs_32 td_semibold td_mb_15">
-                    Sports & Fitness
+                    Career Growth
                   </h3>
                   <p className="td_fs_14 td_heading_color td_opacity_7 mb-0">
-                    Behind the word mountains, far from the Conso there live the
-                    blind texts
+                    Whether you’re a beginner or professional, our trainings help you upskill and stay ahead in the fast-paced tech world.
                   </p>
                 </div>
               </li>

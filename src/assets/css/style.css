@@ -99,9 +99,9 @@
 ** All Variable
 ----------------------------------------------------------------*/
 :root {
-  --white-color: #fff;
-  --heading-color: #00001b;
-  --body-color: #555;
+  --white-color: #ffffff;
+  --heading-color: #1c6c39;
+  --body-color: #444444;
   --accent-color: #007A33;
   --gray-color: #f4f3ef;
   --border-color: #d9d9d9;
@@ -128,7 +128,7 @@
 }
 
 .td_theme_4 {
-  --accent-color: #006766;
+  --accent-color: #1c6c39;
 }
 
 .td_theme_5 {
@@ -9888,16 +9888,12 @@ html .ui-button.ui-state-disabled:active {
 .td_hero.td_style_1::before {
   content: "";
   position: absolute;
-  width: 600px;
-  height: 600px;
-  border-radius: 50%;
-  background: #00001b;
-  -webkit-filter: blur(250px);
-  filter: blur(250px);
-  left: 13%;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Black overlay with adjustable opacity */
+  z-index: 1; /* Ensure overlay is above background but below content */
 }
 .td_hero.td_style_1 .container {
   position: relative;

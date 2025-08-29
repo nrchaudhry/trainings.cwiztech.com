@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import campusLife1 from "../../assets/img/home_1/campur_life_1.jpg";
-import campusLife2 from "../../assets/img/home_1/campur_life_2.jpg";
-import campusLife3 from "../../assets/img/home_1/campur_life_3.jpg";
-import campusLife4 from "../../assets/img/home_1/campur_life_4.jpg";
+import campusLife1 from "../../assets/img/home_1/campusimg1.png";
+import campusLife2 from "../../assets/img/home_1/campusimg2handson.png";
+import campusLife3 from "../../assets/img/home_1/campur_life_3.png";
+import campusLife4 from "../../assets/img/home_1/campur_life_4.png";
 
 export const CampusOne = () => {
   return (
@@ -61,7 +61,7 @@ export const CampusOne = () => {
                 Our Specialties
               </h2>
               <p className="td_section_subtitle td_fs_18 mb-0 text-white">
-                At British Education & Training Systems (CWIZTECH), we pride ourselves on delivering exceptional education tailored to diverse needs.
+               At CWIZTECH, we pride ourselves on delivering practical, industry-driven training designed to prepare learners for real-world success.
               </p>
             </div>
             <div className="td_btn_box">
@@ -99,7 +99,7 @@ export const CampusOne = () => {
                   className="td_btn td_style_1 td_radius_10 td_medium td_fs_18 bg-red-600 text-white hover:bg-red-700"
                 >
                   <span className="td_btn_in border border-white p-">
-                    <span>Explore Courses</span>
+                    <span>Explore Our Trainings</span>
                   </span>
                 </Link>
               </div>
@@ -122,7 +122,7 @@ export const CampusOne = () => {
                   </Link>
                   <div className="td_card_info">
                     <h2 className="td_card_title mb-0 td_fs_18 td_semibold text-white">
-                      <Link to="/course-details">Diverse Course Offerings</Link>
+                      <Link to="/course-details">Hands-On Learning</Link>
                     </h2>
                     <Link to="/course-details" className="td_card_btn">
                       <svg
@@ -319,7 +319,7 @@ export const CampusOne = () => {
                   </Link>
                   <div className="td_card_info">
                     <h2 className="td_card_title mb-0 td_fs_18 td_semibold text-white">
-                      <Link to="/course-details">Personalized Support</Link>
+                      <Link to="/course-details">Personalized Guidance</Link>
                     </h2>
                     <Link to="/course-details" className="td_card_btn">
                       <svg

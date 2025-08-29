@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import heroBg from "../../assets/img/home_1/hero_bg_1.jpg";
+import heroBg from "../../assets/img/home_1/herobg1.jpg";
 
 export const HeroOne = () => {
   return (
@@ -17,21 +17,23 @@ export const HeroOne = () => {
             data-wow-delay="0.35s"
           >
             <p className="td_hero_subtitle_up td_fs_18 td_white_color td_spacing_1 td_semibold text-uppercase td_mb_10 td_opacity_9">
-              Knowledge is Power
+              Empowering Tech Careers
             </p>
             <h1 className="td_hero_title td_fs_64 td_white_color td_mb_12">
-              <span>CWIZTECH</span> - The Best Place to Invest in your Knowledge
+              <span>CWIZTECH</span> <br /> Learn. Build. Grow.
             </h1>
-            <p className="td_hero_subtitle td_fs_18 td_white_color td_opacity_7 td_mb_30">
-              A CWIZTECH is a vibrant institution that serves as a hub for
-              higher education and research. It provides a dynamic environment.
+            <p className="td_hero_subtitle td_fs_18 td_white_color td_opacity_30 td_mb_30">
+              Compuwiz Technologies (Cwiztech) provides hands-on training in IT, 
+              Software Development, UI/UX Design, and emerging tech skills. 
+              Our goal is to equip you with practical knowledge to thrive in 
+              today’s digital world.
             </p>
             <Link
               to="/courses-grid-view"
               className="td_btn td_style_1 td_radius_10 td_medium"
             >
               <span className="td_btn_in td_white_color td_accent_bg">
-                <span>View Our Program</span>
+                <span>View Our Trainee programs</span>
                 <svg
                   width="19"
                   height="20"
