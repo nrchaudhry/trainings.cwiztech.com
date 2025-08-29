@@ -6,7 +6,7 @@ import { HeaderSidebar } from "./HeaderSidebar";
 import { useMobilemenu } from "../../lib/hooks/useMobilemenu";
 import { useStickyHeader } from "../../lib/hooks/useStickyHeader";
 
-import Logo from "../../assets/img/logo.svg"; // Adjust the path as necessary
+import Logo from "../../assets/img/logo.jpg"; // Adjust the path as necessary
 
 export const HeaderOne = () => {
   useMobilemenu();
@@ -106,9 +106,13 @@ export const HeaderOne = () => {
                         </li>
                       </ul>
 
-                      <Link className="td_site_branding"  to="/">
-                        <img src={Logo} alt="Logo" style={{borderRadius:'6px',}}/>
-                      </Link>
+                       <Link className="td_site_branding" to="/">
+                      <img 
+                        src={Logo} 
+                        alt="Logo" 
+                        style={{ borderRadius: "6px", width: "130px", height: "auto" }} 
+                      />
+                    </Link>
 
                       {/* last three */}
                       <ul className="td_nav_list">

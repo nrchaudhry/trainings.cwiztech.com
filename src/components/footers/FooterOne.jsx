@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import footerLogo from "../../assets/img/logo.svg";
+import footerLogo from "../../assets/img/logo.jpg";
 
 export const FooterOne = () => {
   return (
@@ -11,7 +11,7 @@ export const FooterOne = () => {
           <div className="td_footer_col">
             <div className="td_footer_widget">
               <div className="td_footer_text_widget td_fs_18">
-                <img src={footerLogo} alt="Logo" />
+                <img src={footerLogo} className="rounded-4"  alt="Logo" />
                 <p>
                   Far far away, behind the word mountains, far from the
                   CWIZTECH, there live the blind texts.
