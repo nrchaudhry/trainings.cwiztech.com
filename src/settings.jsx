@@ -1,16 +1,16 @@
 export const setting = {
-    AppsStorePath: "http://apps.bets.edu.pk/#/",
-    LoginAppPath: "http://accounts.bets.edu.pk/#/",
-    application_ID: "BETSWebsite",
+    AppsStorePath: "http://apps.cwiztech.com/#/",
+    LoginAppPath: "http://accounts.cwiztech.com/#/",
+    application_ID: "CWIZTECHTrainingsWebsite",
   
     companyName: 'Compuwiz Technologies',
     companyShortName: 'CWizTech',
-    logo: 'http://bets.edu.pk/design/images/logo.png',
-    logo1white: 'http://bets.edu.pk/design/images/logo-short.png',
-    loginBanner1: 'http://bets.edu.pk/design/images/intro-back.jpeg',
-    icon: 'http://bets.edu.pk/design/images/favicon.ico',
+    logo: 'http://design.cwiztech.com/images/logo.png',
+    logo1white: 'http://design.cwiztech.com/images/logo-short.png',
+    loginBanner1: 'http://design.cwiztech.com/images/intro-back.jpeg',
+    icon: 'http://design.cwiztech.com/images/favicon.ico',
   
-    servicePath: "bets/",
+    servicePath: "cwiztech/",
     commonServicePath: "cwiztech/",
   
     isApplication: false,
