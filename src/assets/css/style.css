@@ -8548,7 +8548,11 @@ html .ui-button.ui-state-disabled:active {
   .td_site_branding {
     position: relative;
     z-index: 101;
-  
+    width: 130px; /* Default width for desktop */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Prevent overflow by limiting to container width */
+    object-fit: contain;
+    border-radius: 20px;
   }
   
   .td_nav_list_wrap {
