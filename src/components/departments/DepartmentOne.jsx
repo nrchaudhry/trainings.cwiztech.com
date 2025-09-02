@@ -11,7 +11,7 @@ export const DepartmentOne = () => {
           data-wow-duration="1s"
           data-wow-delay="0.2s"
         >
-          <p className="td_section_subtitle_up td_fs_18 td_semibold td_spacing_1 td_mb_10 text-uppercase td_accent_color">
+          <p className="td_section_subtitle_up td_fs_18 td_semibold td_spacing_1 td_mb_10 text-uppercase text-black td_accent_color">
             Our Programs
           </p>
           <h2 className="td_section_title td_fs_48 mb-0">
@@ -35,7 +35,7 @@ export const DepartmentOne = () => {
             <div className=" td_mb_10">
               <Code size={100} color="#1c6c39" aria-label="Software Development icon" />
             </div>
-            <h3 className="td_iconbox_title mb-0 td_medium td_fs_36">
+            <h3 className="td_iconbox_title mb-0 td_medium td_fs_36 text-black">
               Software <br />Development
             </h3>
           </div>
@@ -49,7 +49,7 @@ export const DepartmentOne = () => {
             <div className=" td_mb_10">
               <Layout size={100} color="#1c6c39" aria-label="UI/UX Design icon" />
             </div>
-            <h3 className="td_iconbox_title mb-0 td_medium td_fs_36">
+            <h3 className="td_iconbox_title mb-0 td_medium td_fs_36 text-black">
               UI/UX <br />Design
             </h3>
           </div>
@@ -63,7 +63,7 @@ export const DepartmentOne = () => {
             <div className=" td_mb_10">
               <Brain size={100} color="#1c6c39" aria-label="AI/ML Engineering icon" />
             </div>
-            <h3 className="td_iconbox_title mb-0 td_medium td_fs_36">
+            <h3 className="td_iconbox_title mb-0 td_medium td_fs_36 text-black">
               AI/ML <br />Engineering
             </h3>
           </div>
@@ -77,7 +77,7 @@ export const DepartmentOne = () => {
             <div className=" td_mb_10">
               <Award size={100} color="#1c6c39" aria-label="IT Certifications icon" />
             </div>
-            <h3 className="td_iconbox_title mb-0 td_medium td_fs_36">
+            <h3 className="td_iconbox_title mb-0 td_medium td_fs_36 text-black">
               IT <br />Certifications
             </h3>
           </div>

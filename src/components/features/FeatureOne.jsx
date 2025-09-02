@@ -1,7 +1,7 @@
 import React from "react";
 import { useHobble } from "../../lib/hooks/useHobble";
 
-import featureImg from "../../assets/img/home_1/feature_img.jpg";
+import featureImg from "../../assets/img/home_1/trainings.jpg";
 
 export const FeatureOne = () => {
   useHobble();

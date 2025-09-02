@@ -103,7 +103,7 @@ export const FooterOne = () => {
                     type="submit"
                     className="td_btn td_style_1 td_radius_30 td_medium"
                   >
-                    <span className="td_btn_in_subscribe td_white_color td_accent_bg">
+                    <span className="td_btn_in_subscribe td_white_color bg-text-black">
                       <span>Subscribe</span>
                     </span>
                   </button>

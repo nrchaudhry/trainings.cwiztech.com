@@ -2,12 +2,12 @@ import React, { useEffect, useState } from 'react';
 import { useTabs } from "../../lib/hooks/useTabs";
 import { CoursesOneItem } from "./CoursesOneItem";
 
-import courseThumb1 from "../../assets/img/home_1/course_thumb_1.jpg";
-import courseThumb2 from "../../assets/img/home_1/course_thumb_2.jpg";
-import courseThumb3 from "../../assets/img/home_1/course_thumb_3.jpg";
-import courseThumb4 from "../../assets/img/home_1/course_thumb_4.jpg";
-import courseThumb5 from "../../assets/img/home_1/course_thumb_5.jpg";
-import courseThumb6 from "../../assets/img/home_1/course_thumb_6.jpg";
+import courseThumb1 from "../../assets/img/home_1/SE.jpg";
+import courseThumb2 from "../../assets/img/home_1/IT.jpg";
+import courseThumb3 from "../../assets/img/home_1/CS.jpg";
+import courseThumb4 from "../../assets/img/home_1/DS.jpg";
+import courseThumb5 from "../../assets/img/home_1/AI.jpg";
+import courseThumb6 from "../../assets/img/home_1/UI.jpg";
 
 import { getCourse } from '../../services/academics/CourseService';
 
@@ -63,10 +63,10 @@ export const CoursesOne = () => {
           data-wow-duration="1s"
           data-wow-delay="0.15s"
         >
-          <p className="td_section_subtitle_up td_fs_18 td_semibold td_spacing_1 td_mb_10 text-uppercase td_accent_color">
-            Popular Courses
+          <p className="td_section_subtitle_up td_fs_18 td_semibold td_spacing_1 td_mb_10 text-uppercase td_accent_color text-black">
+            Popular Trainings
           </p>
-          <h2 className="td_section_title td_fs_48 mb-0">Academic Courses</h2>
+          <h2 className="td_section_title td_fs_48 mb-0">Academic & Prectical Trainings</h2>
         </div>
         <div className="td_height_30 td_height_lg_30" />
 

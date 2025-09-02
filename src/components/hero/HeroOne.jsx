@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import heroBg from "../../assets/img/home_1/herobg1.jpg";
+import heroBg from "../../assets/img/home_1/hero.jpg";
 
 export const HeroOne = () => {
   return (
@@ -23,7 +23,7 @@ export const HeroOne = () => {
               <span>CWIZTECH</span> <br /> Learn. Build. Grow.
             </h1>
             <p className="td_hero_subtitle td_fs_18 td_white_color td_opacity_30 td_mb_30">
-              Compuwiz Technologies (Cwiztech) provides hands-on training in IT, 
+              Compuwiz Technologies (CWIZTECH) provides hands-on training in IT, 
               Software Development, UI/UX Design, and emerging tech skills. 
               Our goal is to equip you with practical knowledge to thrive in 
               today’s digital world.

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import logoBlack from "../../assets/img/logo_black.svg";
+import logoBlack from "../../assets/img/logopng.png";
 
 export const HeaderSidebar = ({ showSidebar, toggleSidebar }) => {
   return (
@@ -13,13 +13,17 @@ export const HeaderSidebar = ({ showSidebar, toggleSidebar }) => {
       <div className="td_side_header_in">
         <div className="td_side_header_shape" />
         <Link className="td_site_branding" href="index.html">
-          <img src={logoBlack} alt="Logo" />
+         <img 
+          src={logoBlack} 
+          alt="Logo" 
+          style={{ borderRadius: "6px", width: "130px", height: "auto"}} 
+          />
         </Link>
 
         <div className="td_side_header_box">
           <h2 className="td_side_header_heading">
-            Do you have a project in your <br />
-            mind? Keep connect us.
+            Do you have a Question in your
+            mind? <br/>Keep connect us.
           </h2>
         </div>
         <div className="td_side_header_box">

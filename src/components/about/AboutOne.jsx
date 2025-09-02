@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import aboutImg1 from "../../assets/img/home_1/about_img_1.jpg";
-import aboutImg2 from "../../assets/img/home_1/about_img_2.jpg";
-import circleText from "../../assets/img/home_1/about_circle_text.svg";
+import aboutImg2 from "../../assets/img/home_1/about_img.jpg";
+import circleText from "../../assets/img/home_1/wct.svg";
 import { VideoPlayer } from "../videos/VideoPlayer";
 
 export const AboutOne = () => {
@@ -67,7 +67,7 @@ export const AboutOne = () => {
                   Practical Tech Education & Training
                 </h2>
                 <p className="td_section_subtitle td_fs_18 mb-0 text-gray-600">
-                  At Compuwiz Technologies (Cwiztech), we specialize in providing 
+                  At Compuwiz Technologies (CWIZTECH), we specialize in providing 
                   high-quality training programs in IT, Software Development, UI/UX Design, 
                   and emerging technologies. Our goal is to equip learners with practical 
                   skills, hands-on experience, and industry-relevant knowledge to help them 

@@ -2,7 +2,7 @@ import React from "react";
 import { useHobble } from "../../lib/hooks/useHobble";
 import { SlickSlider } from "../slick_slider/SlickSlider";
 
-import testimonialImg from "../../assets/img/home_1/testimonial_img.png";
+import testimonialImg from "../../assets/img/home_1/happy.jpg";
 import avatar1 from "../../assets/img/home_1/avatar_1.png";
 import avatar2 from "../../assets/img/home_2/avatar_2.png";
 

@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import campusLife1 from "../../assets/img/home_1/campusimg1.png";
-import campusLife2 from "../../assets/img/home_1/campusimg2handson.png";
-import campusLife3 from "../../assets/img/home_1/campur_life_3.png";
-import campusLife4 from "../../assets/img/home_1/campur_life_4.png";
+import campusLife1 from "../../assets/img/home_1/handson.jpg";
+import campusLife2 from "../../assets/img/home_1/flex.jpg";
+import campusLife3 from "../../assets/img/home_1/industry.jpg";
+import campusLife4 from "../../assets/img/home_1/pr.jpg";
 
 export const CampusOne = () => {
   return (

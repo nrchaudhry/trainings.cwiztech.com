@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import eventThumb1 from "../../assets/img/home_1/event_thumb_1.jpg";
-import eventThumb2 from "../../assets/img/home_1/event_thumb_2.jpg";
-import eventThumb3 from "../../assets/img/home_1/event_thumb_3.jpg";
-import eventThumb4 from "../../assets/img/home_1/event_thumb_4.jpg";
+import eventThumb1 from "../../assets/img/home_1/bootcamp.jpg";
+import eventThumb2 from "../../assets/img/home_1/fullstack.jpg";
+import eventThumb3 from "../../assets/img/home_1/hightech.jpg";
+import eventThumb4 from "../../assets/img/home_1/uiwork.jpg";
 
 export const EventOne = () => {
   return (
@@ -16,12 +16,12 @@ export const EventOne = () => {
           data-wow-duration="1s"
           data-wow-delay="0.2s"
         >
-          <p className="td_section_subtitle_up td_fs_18 td_semibold td_spacing_1 td_mb_10 text-uppercase td_accent_color">
-            Event schedule
+          <p className="td_section_subtitle_up td_fs_18 td_semibold td_spacing_1 td_mb_10 text-uppercase td_accent_color text-black">
+           Training Schedule
           </p>
           <h2 className="td_section_title td_fs_48 mb-0">
-            Upcoming Event Conference 2024 <br />
-            Host by Educve
+             Upcoming CWIZTECH Training Events <br />
+              Powered by Innovation & Excellence
           </h2>
         </div>
         <div className="td_height_50 td_height_lg_50" />
@@ -51,7 +51,7 @@ export const EventOne = () => {
                       fill="currentColor"
                     />
                   </svg>
-                  Tsc Center, Northern Asia
+                  Karachi, Pakistan
                 </span>
               </Link>
               <div className="td_card_info">
@@ -72,7 +72,7 @@ export const EventOne = () => {
                             fill="currentColor"
                           />
                         </svg>
-                        <span>Jan 23 , 2024</span>
+                        <span>Feb 15, 2025</span>
                       </li>
                       <li>
                         <svg
@@ -99,19 +99,19 @@ export const EventOne = () => {
                             </clipPath>
                           </defs>
                         </svg>
-                        <span>10.00 am - 11.30 am</span>
+                        <span>10:00 am - 1:00 pm</span>
                       </li>
                     </ul>
                   </div>
                   <h2 className="td_card_title td_fs_32 td_semibold td_mb_20">
                     <Link to="/event-details">
-                      Innovate 2024: BBA Admission Conference
+                      AI & Data Analytics Bootcamp 2025
                     </Link>
                   </h2>
                   <p className="td_mb_30 td_fs_18">
-                    Education is a dynamic and evolving field that plays a
-                    crucial role in shaping individuals and societies. While
-                    there are significant challenges,
+                    Join CWIZTECH’s intensive bootcamp and gain hands-on experience 
+  in Artificial Intelligence, Machine Learning, and Data Analytics 
+  with real-world projects.
                   </p>
                   <Link
                     to="/event-details"
@@ -175,7 +175,7 @@ export const EventOne = () => {
                             fill="currentColor"
                           />
                         </svg>
-                        <span>Jan 23 , 2024</span>
+                        <span>Mar 10, 2025</span>
                       </li>
                       <li>
                         <svg
@@ -208,7 +208,7 @@ export const EventOne = () => {
                   </div>
                   <h2 className="td_card_title td_fs_20 td_semibold td_mb_20">
                     <Link to="/event-details">
-                      Education, Research and Innovation (ICERI 2024)
+                      Full-Stack Software Development Masterclass
                     </Link>
                   </h2>
                   <span className="td_card_location td_medium td_heading_color">
@@ -225,7 +225,7 @@ export const EventOne = () => {
                         fill="currentColor"
                       />
                     </svg>
-                    Tsc Center, Northern Asia
+                    Lahore, Pakistan
                   </span>
                 </div>
               </div>
@@ -253,7 +253,7 @@ export const EventOne = () => {
                             fill="currentColor"
                           />
                         </svg>
-                        <span>Jan 23 , 2024</span>
+                        <span>May 12, 2025</span>
                       </li>
                       <li>
                         <svg
@@ -280,13 +280,13 @@ export const EventOne = () => {
                             </clipPath>
                           </defs>
                         </svg>
-                        <span>10.00 am</span>
+                        <span>9:30 am - 12:30 pm</span>
                       </li>
                     </ul>
                   </div>
                   <h2 className="td_card_title td_fs_20 td_semibold td_mb_20">
                     <Link to="/event-details">
-                      Innovation, Creativity and Emerging Research (ICERI 2024)
+                      High-Tech Trends Conference 2025
                     </Link>
                   </h2>
                   <span className="td_card_location td_medium td_heading_color">
@@ -303,7 +303,7 @@ export const EventOne = () => {
                         fill="currentColor"
                       />
                     </svg>
-                    Tsc Center, Northern Asia
+                    Islamabad, Pakistan
                   </span>
                 </div>
               </div>
@@ -331,7 +331,7 @@ export const EventOne = () => {
                             fill="currentColor"
                           />
                         </svg>
-                        <span>Jan 23 , 2024</span>
+                        <span>Apr 5, 2025</span>
                       </li>
                       <li>
                         <svg
@@ -358,13 +358,13 @@ export const EventOne = () => {
                             </clipPath>
                           </defs>
                         </svg>
-                        <span>10.00 am</span>
+                        <span>2:00 pm - 5:00 pm</span>
                       </li>
                     </ul>
                   </div>
                   <h2 className="td_card_title td_fs_20 td_semibold td_mb_20">
                     <Link to="/event-details">
-                      Intellectual Curiosity & Educational Reform (ICERI 2024)
+                      UI/UX & Product Design Workshop
                     </Link>
                   </h2>
                   <span className="td_card_location td_medium td_heading_color">
@@ -381,7 +381,7 @@ export const EventOne = () => {
                         fill="currentColor"
                       />
                     </svg>
-                    Tsc Center, Northern Asia
+                    Online (Zoom)
                   </span>
                 </div>
               </div>
