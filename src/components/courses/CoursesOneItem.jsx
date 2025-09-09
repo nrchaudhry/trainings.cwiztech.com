@@ -1,7 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import courseThumb1 from "../../assets/img/home_1/course_thumb_1.jpg";
+import courseThumb1 from "../../assets/img/home_1/SE.jpg";
+import courseThumb2 from "../../assets/img/home_1/IT.jpg";
+import courseThumb3 from "../../assets/img/home_1/CS.jpg";
+import courseThumb4 from "../../assets/img/home_1/DS.jpg";
+import courseThumb5 from "../../assets/img/home_1/AI.jpg";
+import courseThumb6 from "../../assets/img/home_1/UI.jpg";
 import userIcon from "../../assets/img/icons/user_3.svg";
 import bookIcon from "../../assets/img/icons/book.svg";
 

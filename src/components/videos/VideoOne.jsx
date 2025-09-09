@@ -1,6 +1,6 @@
 import React from "react";
 
-import videoBg from "../../assets/img/home_1/video_bg.jpg";
+import videoBg from "../../assets/img/home_1/cwiztech_video_bg.jpg";
 import { VideoPlayer } from "./VideoPlayer";
 
 export const VideoOne = () => {
@@ -33,7 +33,7 @@ export const VideoOne = () => {
           data-wow-delay="0.2s"
           style={{ backgroundColor: '#555', padding: '30px', borderRadius: '50px', width: '300px', border: '4px solid #fff' }} // Dark background with padding for visibility
           >
-          Explore <span style={{ color: "#28A745" }}>CWIZTECH</span> Campuses <br />
+          Explore <span style={{ color: "#28A745" }}>CWIZTECH </span> Trainings Center <br />
           Through a <span style={{ color: "#28A745" }}>Video</span> Tour
           </h2>
         </div>
@@ -49,7 +49,7 @@ export const VideoOne = () => {
               Get In Touch:
             </p>
             <h3 className="td_fs_36 mb-0 td_white_color">
-              <a href="mailto:info@cwiztech.edu.uk">info@cwiztech.edu.uk</a>
+              <a href="mailto:info@cwiztech.com">info@cwiztech.com</a>
             </h3>
           </div>
           <div className="td_contact_box_or td_fs_24 td_medium td_white_bg td_white_bg td_center rounded-circle td_accent_color">
