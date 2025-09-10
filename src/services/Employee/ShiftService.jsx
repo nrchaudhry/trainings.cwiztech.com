@@ -2,7 +2,7 @@ import { setting } from '../../settings';
 import Token from "../get-token"; 
 import { setting } from '../location/LocationService';
 
-export const getShiftService = async () => {
+export const getShiftsService = async () => {
   const response = await Token.post('', {
     request_TYPE: 'GET',
     request_URI: `${setting.servicePath}shiftservice`,
@@ -21,7 +21,7 @@ export const getShiftService = async () => {
 return response;
 };
 
-export const getAllShiftService = async () => {
+export const getAllShiftsService = async () => {
   const response = await Token.post('', {
     request_TYPE: 'GET',
     request_URI: `${setting.servicePath}shiftservice/all`,
@@ -41,7 +41,7 @@ export const getAllShiftService = async () => {
 return response;
 };
 
-export const getOneUniversity = async (id) => {
+export const getOneShift = async (id) => {
   const response = await Token.post('', {
     request_TYPE: 'GET',
     request_URI: `${setting.servicePath}shiftservice/${id}/detail`,
@@ -57,7 +57,7 @@ export const getOneUniversity = async (id) => {
 return response;
 };
 
-export const addUniversity = async (data) => {
+export const addShift = async (data) => {
   const response = await Token.post('', {
     request_TYPE: 'POST',
     request_URI: `${setting.servicePath}shiftservice`,
@@ -77,7 +77,7 @@ export const addUniversity = async (data) => {
 return response;
 };
 
-export const updateUniversity = async (data, id) => {
+export const updateShift = async (data, id) => {
   const response = await Token.post('', {
     request_TYPE: 'PUT',
     request_URI: `${setting.servicePath}shiftservice/${id}`,
@@ -97,7 +97,7 @@ export const updateUniversity = async (data, id) => {
 return response;
 };
 
-export const updateAllUniversites = async (data) => {
+export const updateAllShifts = async (data) => {
   const response = await Token.post('', {
     request_TYPE: 'PUT',
     request_URI: `${setting.servicePath}shiftservice`,
@@ -117,7 +117,7 @@ export const updateAllUniversites = async (data) => {
 return response;
 };
 
-export const deleteProduct = async (id) => {
+export const deleteProductShift = async (id) => {
   const response = await Token.post('', {
     request_TYPE: 'DELETE',
     request_URI: `${setting.servicePath}shiftservice/${id}`,
@@ -137,7 +137,7 @@ export const deleteProduct = async (id) => {
 return response;
 };
 
-export const search = async (data) => {
+export const searchShift = async (data) => {
   const response = await Token.post('', {
     request_TYPE: 'POST',
     request_URI: `${setting.servicePath}shiftservice/search`,
@@ -157,7 +157,7 @@ export const search = async (data) => {
 return response;
 };
 
-export const searchAll = async (data) => {
+export const searchAllShift = async (data) => {
   const response = await Token.post('', {
     request_TYPE: 'POST',
     request_URI: `${setting.servicePath}shiftservice/search/all`,
@@ -177,7 +177,7 @@ export const searchAll = async (data) => {
 return response;
 };
 
-export const advancedSearch = async (data) => {
+export const advancedSearchShift = async (data) => {
   const response = await Token.post('', {
     request_TYPE: 'POST',
     request_URI: `${setting.servicePath}shiftservice/advancedsearch`,
@@ -197,7 +197,7 @@ export const advancedSearch = async (data) => {
 return response;
 };
 
-export const advancedSearchAll = async (data) => {
+export const advancedSearchAllShift = async (data) => {
   const response = await Token.post('', {
     request_TYPE: 'POST',
     request_URI: `${setting.servicePath}shiftservice/advancedsearch/all`,

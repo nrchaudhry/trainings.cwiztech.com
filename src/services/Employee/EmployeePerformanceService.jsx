@@ -41,7 +41,7 @@ export const getAllEmployeePerformance = async () => {
 return response;
 };
 
-export const getOneUniversity = async (id) => {
+export const getOneEmployeePerformance = async (id) => {
   const response = await Token.post('', {
     request_TYPE: 'GET',
     request_URI: `${setting.servicePath}employeeperformance/${id}/detail`,
@@ -57,7 +57,7 @@ export const getOneUniversity = async (id) => {
 return response;
 };
 
-export const addUniversity = async (data) => {
+export const addEmployeePerformance = async (data) => {
   const response = await Token.post('', {
     request_TYPE: 'POST',
     request_URI: `${setting.servicePath}employeeperformance`,
@@ -77,7 +77,7 @@ export const addUniversity = async (data) => {
 return response;
 };
 
-export const updateUniversity = async (data, id) => {
+export const updateEmployeePerformance = async (data, id) => {
   const response = await Token.post('', {
     request_TYPE: 'PUT',
     request_URI: `${setting.servicePath}employeeperformance/${id}`,
@@ -97,7 +97,7 @@ export const updateUniversity = async (data, id) => {
 return response;
 };
 
-export const updateAllUniversites = async (data) => {
+export const updateAllEmployeePerformance = async (data) => {
   const response = await Token.post('', {
     request_TYPE: 'PUT',
     request_URI: `${setting.servicePath}employeeperformance`,
@@ -117,7 +117,7 @@ export const updateAllUniversites = async (data) => {
 return response;
 };
 
-export const deleteProduct = async (id) => {
+export const deleteProductEmployeePerformance = async (id) => {
   const response = await Token.post('', {
     request_TYPE: 'DELETE',
     request_URI: `${setting.servicePath}employeeperformance/${id}`,
@@ -137,7 +137,7 @@ export const deleteProduct = async (id) => {
 return response;
 };
 
-export const search = async (data) => {
+export const searchEmployeePerformance = async (data) => {
   const response = await Token.post('', {
     request_TYPE: 'POST',
     request_URI: `${setting.servicePath}employeeperformance/search`,
@@ -157,7 +157,7 @@ export const search = async (data) => {
 return response;
 };
 
-export const searchAll = async (data) => {
+export const searchAllEmployeePerformance = async (data) => {
   const response = await Token.post('', {
     request_TYPE: 'POST',
     request_URI: `${setting.servicePath}employeeperformance/search/all`,
@@ -177,7 +177,7 @@ export const searchAll = async (data) => {
 return response;
 };
 
-export const advancedSearch = async (data) => {
+export const advancedSearchEmployeePerformance = async (data) => {
   const response = await Token.post('', {
     request_TYPE: 'POST',
     request_URI: `${setting.servicePath}employeeperformance/advancedsearch`,
@@ -197,7 +197,7 @@ export const advancedSearch = async (data) => {
 return response;
 };
 
-export const advancedSearchAll = async (data) => {
+export const advancedSearchAllEmployeePerformance = async (data) => {
   const response = await Token.post('', {
     request_TYPE: 'POST',
     request_URI: `${setting.servicePath}employeeperformance/advancedsearch/all`,

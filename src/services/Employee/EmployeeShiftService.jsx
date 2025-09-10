@@ -2,7 +2,7 @@ import { setting } from '../../settings';
 import Token from "../get-token"; 
 import { setting } from '../location/LocationService';
 
-export const getEmployeeShiftService = async () => {
+export const getEmployeeShiftsService = async () => {
   const response = await Token.post('', {
     request_TYPE: 'GET',
     request_URI: `${setting.servicePath}employeeshiftservice`,
@@ -21,7 +21,7 @@ export const getEmployeeShiftService = async () => {
 return response;
 };
 
-export const getAllEmployeeShiftService = async () => {
+export const getAllEmployeeShiftsService = async () => {
   const response = await Token.post('', {
     request_TYPE: 'GET',
     request_URI: `${setting.servicePath}employeeshiftservice/all`,
@@ -41,7 +41,7 @@ export const getAllEmployeeShiftService = async () => {
 return response;
 };
 
-export const getOneUniversity = async (id) => {
+export const getOneEmployeeShift = async (id) => {
   const response = await Token.post('', {
     request_TYPE: 'GET',
     request_URI: `${setting.servicePath}employeeshiftservice/${id}/detail`,
@@ -57,7 +57,7 @@ export const getOneUniversity = async (id) => {
 return response;
 };
 
-export const addUniversity = async (data) => {
+export const addEmployeeShift = async (data) => {
   const response = await Token.post('', {
     request_TYPE: 'POST',
     request_URI: `${setting.servicePath}employeeshiftservice`,
@@ -77,7 +77,7 @@ export const addUniversity = async (data) => {
 return response;
 };
 
-export const updateUniversity = async (data, id) => {
+export const updateEmployeeShift = async (data, id) => {
   const response = await Token.post('', {
     request_TYPE: 'PUT',
     request_URI: `${setting.servicePath}employeeshiftservice/${id}`,
@@ -97,7 +97,7 @@ export const updateUniversity = async (data, id) => {
 return response;
 };
 
-export const updateAllUniversites = async (data) => {
+export const updateAllEmployeeShift = async (data) => {
   const response = await Token.post('', {
     request_TYPE: 'PUT',
     request_URI: `${setting.servicePath}employeeshiftservice`,
@@ -117,7 +117,7 @@ export const updateAllUniversites = async (data) => {
 return response;
 };
 
-export const deleteProduct = async (id) => {
+export const deleteProductEmployeeShift = async (id) => {
   const response = await Token.post('', {
     request_TYPE: 'DELETE',
     request_URI: `${setting.servicePath}employeeshiftservice/${id}`,
@@ -137,7 +137,7 @@ export const deleteProduct = async (id) => {
 return response;
 };
 
-export const search = async (data) => {
+export const searchEmployeeShift = async (data) => {
   const response = await Token.post('', {
     request_TYPE: 'POST',
     request_URI: `${setting.servicePath}employeeshiftservice/search`,
@@ -157,7 +157,7 @@ export const search = async (data) => {
 return response;
 };
 
-export const searchAll = async (data) => {
+export const searchAllEmployeeShift = async (data) => {
   const response = await Token.post('', {
     request_TYPE: 'POST',
     request_URI: `${setting.servicePath}employeeshiftservice/search/all`,
@@ -177,7 +177,7 @@ export const searchAll = async (data) => {
 return response;
 };
 
-export const advancedSearch = async (data) => {
+export const advancedSearchEmployeeShift = async (data) => {
   const response = await Token.post('', {
     request_TYPE: 'POST',
     request_URI: `${setting.servicePath}employeeshiftservice/advancedsearch`,
@@ -197,7 +197,7 @@ export const advancedSearch = async (data) => {
 return response;
 };
 
-export const advancedSearchAll = async (data) => {
+export const advancedSearchAllEmployeeShift = async (data) => {
   const response = await Token.post('', {
     request_TYPE: 'POST',
     request_URI: `${setting.servicePath}employeeshiftservice/advancedsearch/all`,
