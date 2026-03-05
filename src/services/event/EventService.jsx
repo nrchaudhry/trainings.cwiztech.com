@@ -1,11 +1,11 @@
+
 import { setting } from '../../settings';
 import Token from "../get-token"; 
-import { setting } from '../location/LocationService';
 
-export const getUniversities = async () => {
+export const getEvents = async () => {
   const response = await Token.post('', {
     request_TYPE: 'GET',
-    request_URI: `${setting.servicePath}university`,
+    request_URI: `${setting.servicePath}event`,
     request_BODY: ''
     }).then((response) => {
         if (response.data && response.data.length > 0) {
@@ -21,10 +21,10 @@ export const getUniversities = async () => {
 return response;
 };
 
-export const getAllUniversities = async () => {
+export const getAllEvents = async () => {
   const response = await Token.post('', {
     request_TYPE: 'GET',
-    request_URI: `${setting.servicePath}university/all`,
+    request_URI: `${setting.servicePath}event/all`,
     request_BODY: ''
 })
     .then((response) => {
@@ -41,10 +41,10 @@ export const getAllUniversities = async () => {
 return response;
 };
 
-export const getOneUniversity = async (id) => {
+export const getOneEvent = async (id) => {
   const response = await Token.post('', {
     request_TYPE: 'GET',
-    request_URI: `${setting.servicePath}university/${id}`,
+    request_URI: `${setting.servicePath}event/${id}/detail`,
     request_BODY: ""
 })
     .then((response) => {
@@ -57,10 +57,10 @@ export const getOneUniversity = async (id) => {
 return response;
 };
 
-export const addUniversity = async (data) => {
+export const addEvent = async (data) => {
   const response = await Token.post('', {
     request_TYPE: 'POST',
-    request_URI: `${setting.servicePath}university`,
+    request_URI: `${setting.servicePath}event`,
     request_BODY: JSON.stringify(data),
 })
     .then((response) => {
@@ -77,10 +77,10 @@ export const addUniversity = async (data) => {
 return response;
 };
 
-export const updateUniversity = async (data, id) => {
+export const updateEvent = async (data, id) => {
   const response = await Token.post('', {
     request_TYPE: 'PUT',
-    request_URI: `${setting.servicePath}university/${id}`,
+    request_URI: `${setting.servicePath}event/${id}`,
     request_BODY: JSON.stringify(data),
 })
     .then((response) => {
@@ -97,10 +97,10 @@ export const updateUniversity = async (data, id) => {
 return response;
 };
 
-export const updateAllUniversities = async (data) => {
+export const updateAllEvents = async (data) => {
   const response = await Token.post('', {
     request_TYPE: 'PUT',
-    request_URI: `${setting.servicePath}university`,
+    request_URI: `${setting.servicePath}event`,
     request_BODY: JSON.stringify(data),
 })
     .then((response) => {
@@ -117,10 +117,10 @@ export const updateAllUniversities = async (data) => {
 return response;
 };
 
-export const deleteUniversity = async (id) => {
+export const deleteEvent = async (id) => {
   const response = await Token.post('', {
     request_TYPE: 'DELETE',
-    request_URI: `${setting.servicePath}university/${id}`,
+    request_URI: `${setting.servicePath}event/${id}`,
     request_BODY: '',
 })
     .then((response) => {
@@ -137,10 +137,10 @@ export const deleteUniversity = async (id) => {
 return response;
 };
 
-export const searchUniversities = async (data) => {
+export const searchEvent = async (data) => {
   const response = await Token.post('', {
     request_TYPE: 'POST',
-    request_URI: `${setting.servicePath}university/search`,
+    request_URI: `${setting.servicePath}event/search`,
     request_BODY: JSON.stringify(data),
 })
     .then((response) => {
@@ -157,10 +157,10 @@ export const searchUniversities = async (data) => {
 return response;
 };
 
-export const searchAllUniversities = async (data) => {
+export const searchAllEvents = async (data) => {
   const response = await Token.post('', {
     request_TYPE: 'POST',
-    request_URI: `${setting.servicePath}university/search/all`,
+    request_URI: `${setting.servicePath}event/search/all`,
     request_BODY: JSON.stringify(data),
 })
     .then((response) => {
@@ -177,10 +177,10 @@ export const searchAllUniversities = async (data) => {
 return response;
 };
 
-export const advancedSearchUniversities = async (data) => {
+export const advancedSearchEvent = async (data) => {
   const response = await Token.post('', {
     request_TYPE: 'POST',
-    request_URI: `${setting.servicePath}university/advancedsearch`,
+    request_URI: `${setting.servicePath}event/advancedsearch`,
     request_BODY: JSON.stringify(data),
 })
     .then((response) => {
@@ -197,10 +197,10 @@ export const advancedSearchUniversities = async (data) => {
 return response;
 };
 
-export const advancedSearchAllUniversities = async (data) => {
+export const advancedSearchAllEvents = async (data) => {
   const response = await Token.post('', {
     request_TYPE: 'POST',
-    request_URI: `${setting.servicePath}university/advancedsearch/all`,
+    request_URI: `${setting.servicePath}event/advancedsearch/all`,
     request_BODY: JSON.stringify(data),
 })
     .then((response) => {
@@ -218,36 +218,14 @@ return response;
 };
 
 export const getAllDetail = (response) => {
-  return response.map(university => getDetail(university));
+  return response.map(event => getDetail(event));
 };
 
 export const getDetail = (response) => {
-        response.address = response.address_LINE1;
-    if (response.address_LINE2 != null && response.address_LINE2 != '')
-      response.address = `${response.address}, ${response.address_LINE2}`
-    if (response.address_LINE3 != null && response.address_LINE3 != '')
-      response.address = `${response.address}, ${response.address_LINE3}`
-    if (response.address_LINE4 != null && response.address_LINE4 != '')
-      response.address = `${response.address}, ${response.address_LINE4}`
-    if (response.address_LINE5 != null && response.address_LINE5 != '')
-      response.address = `${response.address}, ${response.address_LINE5}`
-
-    if (response.location_DETAIL != null) {
-      response.location = this.locationservice.getDetail(JSON.parse(response.location_DETAIL));
-      response.locations = [];
-      response.location_DETAIL = null;
-      while (response.location.locationparent_ID != null) {
-        response.address = response.address + ", " + response.location.location_NAME;
-        response.locations.push(response.location);
-        response.location = response.location.locationparent_ID;
-      }
-      response.locations.push(response.location);
+    if (response.eventtype_DETAIL != null) {
+      response.eventtype = JSON.parse(response.eventtype_DETAIL);
+      response.eventtype_DETAIL = response.eventtype.code + ' - ' + response.eventtype.description;
     }
 
-
-  if (response.location_DETAIL) {
-    response.location = getDetail(JSON.parse(response.location_DETAIL));
-    response.location_DETAIL = null;
-  }
   return response;
 };
