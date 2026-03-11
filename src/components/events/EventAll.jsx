@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
+
+import { getEvents } from '../../services/event/EventService';
 
 import event1 from "../../assets/img/home_1/event_thumb_1.jpg";
 import event5 from "../../assets/img/home_1/event_thumb_5.jpg";
@@ -63,12 +65,28 @@ const eventsList = [
 ];
 
 export const EventAll = () => {
+  const [events, setEvents] = useState([]);
+
+  // Fetch events data from API
+  useEffect(() => {
+    const fetchEvents = async () => {
+      try {
+        const result = await getEvents();
+        setEvents(result);
+      } catch (err) {
+        console.error("Error fetching events", err);
+      }
+    };
+    fetchEvents();
+  }, []);
+
+
   return (
     <section>
       <div className="td_height_120 td_height_lg_80" />
       <div className="container">
         <div className="row td_gap_y_30">
-          {eventsList.map((event, index) => (
+          {events.map((event, index) => (
             <div key={index} className="col-lg-6">
               <Item {...event} />
             </div>
@@ -114,11 +132,47 @@ export const EventAll = () => {
   );
 };
 
-const Item = ({ src, location, date, time, title, description }) => {
+const Item = ({ event_TITLE, event_DESCRIPTION }) => {
   return (
     <div className="td_card td_style_1 td_radius_5">
       <Link to="/event-details" className="td_card_thumb td_mb_30 d-block">
-        <img src={src} alt={title} />
+        <i className="fa-solid fa-arrow-up-right-from-square"></i>
+        <span className="td_card_location td_medium td_white_color td_fs_18">
+          <svg
+            width="16"
+            height="22"
+            viewBox="0 0 16 22"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M8.0004 0.5C3.86669 0.5 0.554996 3.86526 0.500458 7.98242C0.48345 9.42271 0.942105 10.7046 1.56397 11.8232C2.76977 13.9928 4.04435 16.8182 5.32856 19.4639C5.9286 20.7002 6.89863 21.5052 8.0004 21.5C9.10217 21.4948 10.0665 20.6836 10.6575 19.4404C11.9197 16.7856 13.1685 13.9496 14.4223 11.835C15.1136 10.6691 15.4653 9.3606 15.4974 8.01758C15.5966 3.86772 12.1342 0.5 8.0004 0.5ZM8.0004 2.00586C11.3235 2.00586 14.0821 4.6775 14.0033 7.97363C13.9749 9.08002 13.6796 10.1416 13.1273 11.0732C11.7992 13.3133 10.5449 16.1706 9.2954 18.7988C8.85773 19.7191 8.35538 19.9924 7.98864 19.9941C7.62183 19.9959 7.12572 19.7246 6.68204 18.8105C5.41121 16.1923 4.12648 13.3534 2.87056 11.0938C2.32971 10.121 1.9798 9.11653 1.9946 8.00586C2.03995 4.67555 4.67723 2.00586 8.0004 2.00586ZM8.0004 4.25C5.94024 4.25 4.25034 5.94266 4.25034 8.00586C4.25034 10.0691 5.94024 11.75 8.0004 11.75C10.0605 11.75 11.7503 10.0691 11.7503 8.00586C11.7503 5.94266 10.0605 4.25 8.0004 4.25ZM8.0004 5.74414C9.25065 5.74414 10.2446 6.75372 10.2446 8.00586C10.2446 9.258 9.25065 10.2559 8.0004 10.2559C6.7501 10.2559 5.75331 9.258 5.75331 8.00586C5.75331 6.75372 6.7501 5.74414 8.0004 5.74414Z"
+              fill="currentColor"
+            />
+          </svg>
+        </span>
+      </Link>
+
+      <div className="td_card_info">
+        <div className="td_card_info_in">
+
+          <h2 className="td_card_title td_fs_32 td_semibold td_mb_20">
+            <Link to="/event-details">{event_TITLE}</Link>
+          </h2>
+
+          <p className="td_mb_30 td_fs_18">{event_DESCRIPTION}</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+
+const Item1 = ({ src, location, date, time, event_TITLE, description }) => {
+  return (
+    <div className="td_card td_style_1 td_radius_5">
+      <Link to="/event-details" className="td_card_thumb td_mb_30 d-block">
+        <img src={src} alt={event_TITLE} />
         <i className="fa-solid fa-arrow-up-right-from-square"></i>
         <span className="td_card_location td_medium td_white_color td_fs_18">
           <svg
@@ -183,7 +237,7 @@ const Item = ({ src, location, date, time, title, description }) => {
           </div>
 
           <h2 className="td_card_title td_fs_32 td_semibold td_mb_20">
-            <Link to="/event-details">{title}</Link>
+            <Link to="/event-details">{event_TITLE}</Link>
           </h2>
 
           <p className="td_mb_30 td_fs_18">{description}</p>
