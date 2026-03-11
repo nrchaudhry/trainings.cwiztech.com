@@ -211,9 +211,10 @@ export const getAllDetail = (response) => {
 };
 
 export const getDetail = (response) => {
-//   if (response.qualification_DETAIL) {
-//     response.qualification = getDetail(JSON.parse(response.qualification_DETAIL));
-//     response.qualification_DETAIL = `${response.qualification.qualification_CODE} - ${response.qualification.qualification_NAME}`;
-//   }
+    if (response.eventtype_DETAIL != null) {
+      response.eventtype = JSON.parse(response.eventtype_DETAIL);
+      response.eventtype_DETAIL = response.eventtype.code + ' - ' + response.eventtype.description;
+    }
+
   return response;
 };

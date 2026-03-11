@@ -44,7 +44,7 @@ return response;
 export const getOneUniversity = async (id) => {
   const response = await Token.post('', {
     request_TYPE: 'GET',
-    request_URI: `${setting.servicePath}university/${id}/detail`,
+    request_URI: `${setting.servicePath}university/${id}`,
     request_BODY: ""
 })
     .then((response) => {
@@ -97,7 +97,7 @@ export const updateUniversity = async (data, id) => {
 return response;
 };
 
-export const updateAllUniversites = async (data) => {
+export const updateAllUniversities = async (data) => {
   const response = await Token.post('', {
     request_TYPE: 'PUT',
     request_URI: `${setting.servicePath}university`,
@@ -117,7 +117,7 @@ export const updateAllUniversites = async (data) => {
 return response;
 };
 
-export const deleteProduct = async (id) => {
+export const deleteUniversity = async (id) => {
   const response = await Token.post('', {
     request_TYPE: 'DELETE',
     request_URI: `${setting.servicePath}university/${id}`,
@@ -137,7 +137,7 @@ export const deleteProduct = async (id) => {
 return response;
 };
 
-export const search = async (data) => {
+export const searchUniversities = async (data) => {
   const response = await Token.post('', {
     request_TYPE: 'POST',
     request_URI: `${setting.servicePath}university/search`,
@@ -157,7 +157,7 @@ export const search = async (data) => {
 return response;
 };
 
-export const searchAll = async (data) => {
+export const searchAllUniversities = async (data) => {
   const response = await Token.post('', {
     request_TYPE: 'POST',
     request_URI: `${setting.servicePath}university/search/all`,
@@ -177,7 +177,7 @@ export const searchAll = async (data) => {
 return response;
 };
 
-export const advancedSearch = async (data) => {
+export const advancedSearchUniversities = async (data) => {
   const response = await Token.post('', {
     request_TYPE: 'POST',
     request_URI: `${setting.servicePath}university/advancedsearch`,
@@ -197,7 +197,7 @@ export const advancedSearch = async (data) => {
 return response;
 };
 
-export const advancedSearchAll = async (data) => {
+export const advancedSearchAllUniversities = async (data) => {
   const response = await Token.post('', {
     request_TYPE: 'POST',
     request_URI: `${setting.servicePath}university/advancedsearch/all`,

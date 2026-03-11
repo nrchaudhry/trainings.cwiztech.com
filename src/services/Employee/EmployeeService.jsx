@@ -2,10 +2,10 @@ import { setting } from '../../settings';
 import Token from "../get-token"; 
 import { setting } from '../location/LocationService';
 
-export const getEmployeesService = async () => {
+export const getEmployees = async () => {
   const response = await Token.post('', {
     request_TYPE: 'GET',
-    request_URI: `${setting.servicePath}employeeservice`,
+    request_URI: `${setting.servicePath}employee`,
     request_BODY: ''
     }).then((response) => {
         if (response.data && response.data.length > 0) {
@@ -21,10 +21,10 @@ export const getEmployeesService = async () => {
 return response;
 };
 
-export const getAllEmployeesService = async () => {
+export const getAllEmployees = async () => {
   const response = await Token.post('', {
     request_TYPE: 'GET',
-    request_URI: `${setting.servicePath}employeeservice/all`,
+    request_URI: `${setting.servicePath}employee/all`,
     request_BODY: ''
 })
     .then((response) => {
@@ -44,7 +44,7 @@ return response;
 export const getOneEmployee = async (id) => {
   const response = await Token.post('', {
     request_TYPE: 'GET',
-    request_URI: `${setting.servicePath}employeeservice/${id}/detail`,
+    request_URI: `${setting.servicePath}employee/${id}`,
     request_BODY: ""
 })
     .then((response) => {
@@ -60,7 +60,7 @@ return response;
 export const addEmployee = async (data) => {
   const response = await Token.post('', {
     request_TYPE: 'POST',
-    request_URI: `${setting.servicePath}employeeservice`,
+    request_URI: `${setting.servicePath}employee`,
     request_BODY: JSON.stringify(data),
 })
     .then((response) => {
@@ -80,7 +80,7 @@ return response;
 export const updateEmployee = async (data, id) => {
   const response = await Token.post('', {
     request_TYPE: 'PUT',
-    request_URI: `${setting.servicePath}employeeservice/${id}`,
+    request_URI: `${setting.servicePath}employee/${id}`,
     request_BODY: JSON.stringify(data),
 })
     .then((response) => {
@@ -100,7 +100,7 @@ return response;
 export const updateAllEmployees = async (data) => {
   const response = await Token.post('', {
     request_TYPE: 'PUT',
-    request_URI: `${setting.servicePath}employeeservice`,
+    request_URI: `${setting.servicePath}employee`,
     request_BODY: JSON.stringify(data),
 })
     .then((response) => {
@@ -117,10 +117,10 @@ export const updateAllEmployees = async (data) => {
 return response;
 };
 
-export const deleteProductEmployee = async (id) => {
+export const deleteEmployee = async (id) => {
   const response = await Token.post('', {
     request_TYPE: 'DELETE',
-    request_URI: `${setting.servicePath}employeeservice/${id}`,
+    request_URI: `${setting.servicePath}employee/${id}`,
     request_BODY: '',
 })
     .then((response) => {
@@ -137,10 +137,10 @@ export const deleteProductEmployee = async (id) => {
 return response;
 };
 
-export const searchEmployee = async (data) => {
+export const searchEmployees = async (data) => {
   const response = await Token.post('', {
     request_TYPE: 'POST',
-    request_URI: `${setting.servicePath}employeeservice/search`,
+    request_URI: `${setting.servicePath}employee/search`,
     request_BODY: JSON.stringify(data),
 })
     .then((response) => {
@@ -157,10 +157,10 @@ export const searchEmployee = async (data) => {
 return response;
 };
 
-export const searchAllEmployee = async (data) => {
+export const searchAllEmployees = async (data) => {
   const response = await Token.post('', {
     request_TYPE: 'POST',
-    request_URI: `${setting.servicePath}employeeservice/search/all`,
+    request_URI: `${setting.servicePath}employee/search/all`,
     request_BODY: JSON.stringify(data),
 })
     .then((response) => {
@@ -177,10 +177,10 @@ export const searchAllEmployee = async (data) => {
 return response;
 };
 
-export const advancedSearchEmployee = async (data) => {
+export const advancedSearchEmployees = async (data) => {
   const response = await Token.post('', {
     request_TYPE: 'POST',
-    request_URI: `${setting.servicePath}employeeservice/advancedsearch`,
+    request_URI: `${setting.servicePath}employee/advancedsearch`,
     request_BODY: JSON.stringify(data),
 })
     .then((response) => {
@@ -197,10 +197,10 @@ export const advancedSearchEmployee = async (data) => {
 return response;
 };
 
-export const advancedSearchAllEmployee = async (data) => {
+export const advancedSearchAllEmployees = async (data) => {
   const response = await Token.post('', {
     request_TYPE: 'POST',
-    request_URI: `${setting.servicePath}employeeservice/advancedsearch/all`,
+    request_URI: `${setting.servicePath}employee/advancedsearch/all`,
     request_BODY: JSON.stringify(data),
 })
     .then((response) => {
