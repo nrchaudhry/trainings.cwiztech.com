@@ -78,7 +78,7 @@ export const HeaderOne = () => {
                           </ul>*/}
                         </li>
                         <li className="menu-item-has-children">
-                          <Link to="/products">Courses</Link>
+                          <Link to="/courses-grid-view">Courses</Link>
                           <ul>
                             <li>
                               <Link to="/courses-grid-view">
