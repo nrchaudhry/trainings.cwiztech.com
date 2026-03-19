@@ -265,7 +265,7 @@ teachertrainingcourse_ID
 : 
 null
 */
-const coursesList = await getAllCourses();
+//const coursesList = await getAllCourses();
 
 export const CoursesAllGrid = () => {
   return (
