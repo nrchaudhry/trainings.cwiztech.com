@@ -199,7 +199,7 @@ export const EventOne = () => {
                           <defs>
                             <clipPath id="clip0">
                               <rect width="24" height="24" fill="white" />
-                            </clipPath>
+                            </clipPath> 
                           </defs>
                         </svg>
                         <span>10.00 am - 11.30 am</span>
