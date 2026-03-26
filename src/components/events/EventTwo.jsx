@@ -1,42 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
-import eventThumb1 from "../../assets/img/home_2/event_thumb_1.jpg";
-import eventThumb2 from "../../assets/img/home_2/event_thumb_2.jpg";
-import eventThumb3 from "../../assets/img/home_2/event_thumb_3.jpg";
-
-const events = [
-  {
-    id: 1,
-    image: eventThumb1,
-    date: "Jan 23, 2024",
-    time: "10.00 am - 11.30 am",
-    location: "Tsc Center, Northern Asia",
-    title: "Education, Research and Innovation (ICERI 2024)",
-    description:
-      "Education is a dynamic and evolving field that plays a crucial role in shaping individuals and societies. While there are significant challenges,",
-  },
-  {
-    id: 2,
-    image: eventThumb2,
-    date: "Jan 18, 2024",
-    time: "10.00 am - 11.30 am",
-    location: "Tsc Center, Northern Asia",
-    title: "Education, Research and Innovation (ICERI 2024)",
-    description:
-      "Education is a dynamic and evolving field that plays a crucial role in shaping individuals and societies. While there are significant challenges,",
-  },
-  {
-    id: 3,
-    image: eventThumb3,
-    date: "Jan 10, 2024",
-    time: "10.00 am - 11.30 am",
-    location: "Tsc Center, Northern Asia",
-    title: "Innovate 2024: SXSW EDU Conference & Festival",
-    description:
-      "Education is a dynamic and evolving field that plays a crucial role in shaping individuals and societies. While there are significant challenges,",
-  },
-];
+import { events } from "../../data/eventsData";
 
 export const EventTwo = () => {
   return (
@@ -68,15 +32,15 @@ export const EventTwo = () => {
         <div className="td_height_50 td_height_lg_50" />
 
         <div className="row td_gap_y_30">
-          {events.map((event, idx) => (
+          {eventsData.map((event, idx) => (
             <div
-              key={idx}
+              key={event.id}
               className="col-lg-12 wow fadeInUp"
               data-wow-duration="1s"
               data-wow-delay={`0.${25 + idx * 5}s`}
             >
               <div className="td_card td_style_1 td_type_2 td_white_bg">
-                <Link to="/event-details" className="td_card_thumb d-block">
+                <Link to={`/event-details/${event.id}`} className="td_card_thumb d-block">
                   <img src={event.image} alt="Event thumbnail" />
                   <i className="fa-solid fa-arrow-up-right-from-square"></i>
                 </Link>
@@ -150,7 +114,7 @@ export const EventTwo = () => {
                       </ul>
                     </div>
                     <h2 className="td_card_title td_fs_32 td_semibold td_mb_25">
-                      <Link to="/event-details">{event.title}</Link>
+                      <Link to={`/event-details/${event.id}`}>{event.title}</Link>
                     </h2>
                     <p className="td_fs_18 td_mb_40">{event.description}</p>
                     <Link
